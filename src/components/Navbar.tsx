@@ -38,7 +38,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4">
         <button onClick={() => scrollTo("#home")} className="flex items-center gap-2">
-          <img src={logo} alt="SunEnergy SRLS" className="h-10 md:h-12 brightness-0 invert" />
+          <img src={logo} alt="SunEnergy SRLS" className="h-14 md:h-16 drop-shadow-lg" style={{ mixBlendMode: 'screen' }} />
         </button>
 
         {/* Desktop */}
