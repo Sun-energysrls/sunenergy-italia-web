@@ -105,7 +105,7 @@
   }
 
   .bg-hero-overlay {
-    background: linear-gradient(to right, hsla(var(--navy-dark), 0.85), hsla(var(--navy), 0.6));
+    background: linear-gradient(to right, rgba(5, 15, 35, 0.9), rgba(10, 31, 68, 0.7));
   }
 
   .section-padding {

@@ -53,15 +53,15 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="max-w-3xl"
         >
-          <span className="inline-block bg-secondary/20 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm border border-secondary/30">
+          <span className="inline-block bg-secondary/30 text-white px-4 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm border border-secondary/40">
             Energia Solare Utility-Scale
           </span>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
             Soluzioni Fotovoltaiche
             <br />
-            <span className="text-secondary">su Larga Scala</span>
+            <span className="text-secondary drop-shadow-md">su Larga Scala</span>
           </h1>
-          <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed">
+          <p className="text-white/90 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed drop-shadow-sm">
             Partner affidabile per impianti fotovoltaici utility-scale, import/export di componenti 
             e servizi EPC. Progettiamo il futuro energetico con competenza e innovazione.
           </p>
