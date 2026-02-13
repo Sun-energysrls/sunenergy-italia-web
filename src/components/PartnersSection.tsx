@@ -1,9 +1,16 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-import nowatechLogo from "@/assets/nowatech-logo.jpg";
 
 const partners = [
-  { name: "NOWATECH", logo: nowatechLogo },
+  "HUAWEI",
+  "Azzurro",
+  "SUNGROW",
+  "JA SOLAR",
+  "Risen",
+  "SolarEdge",
+  "PHILIPS",
+  "OSRAM",
+  "SAMSUNG",
 ];
 
 const certifications = [
@@ -49,16 +56,17 @@ const PartnersSection = () => {
         </motion.div>
 
         {/* Partner logos */}
-        <div className="flex flex-wrap justify-center gap-8 mb-16">
-          {partners.map((p) => (
+        <div className="flex flex-wrap justify-center gap-6 mb-16">
+          {partners.map((name, i) => (
             <motion.div
-              key={p.name}
+              key={name}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="bg-card border border-border rounded-xl p-6 flex items-center justify-center w-40 h-40"
+              transition={{ delay: i * 0.05 }}
+              className="bg-card border border-border rounded-xl px-8 py-5 flex items-center justify-center"
             >
-              <img src={p.logo} alt={p.name} className="max-h-24 max-w-full object-contain" />
+              <span className="font-display font-bold text-foreground text-lg tracking-wide">{name}</span>
             </motion.div>
           ))}
         </div>
