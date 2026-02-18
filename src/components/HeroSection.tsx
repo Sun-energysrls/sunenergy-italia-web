@@ -128,30 +128,25 @@ const HeroSection = () => {
             </div>
 
             {/* Photovoltaic section */}
-            <div className="flex items-start gap-3">
-              <div className="w-5 h-5 mt-0.5 shrink-0 flex items-center justify-center">
-                <Sun className="w-4 h-4 text-orange" />
-              </div>
-              <div>
-                <p className="font-bold text-white text-sm leading-snug">Fotovoltaico Utility-Scale</p>
-                <p className="text-white/60 text-xs leading-relaxed mt-1">Oltre 25 MW installati in tutta Italia.</p>
-              </div>
+            <div className="flex items-center gap-3 mb-1">
+              <Sun className="w-4 h-4 text-orange shrink-0" />
+              <p className="font-bold text-white text-sm">Fotovoltaico Utility-Scale</p>
             </div>
+            <p className="text-white/60 text-xs leading-relaxed ml-7 mt-1">
+              Oltre 25 MW installati in tutta Italia.
+            </p>
 
-            <div className="h-6" />
+            {/* Divider */}
+            <div className="h-px bg-white/10 my-5 ml-7" />
 
             {/* Lighting section */}
-            <div className="flex items-start gap-3">
-              <div className="w-5 h-5 mt-0.5 shrink-0 flex items-center justify-center">
-                <Lightbulb className="w-4 h-4 text-orange" />
-              </div>
-              <div>
-                <p className="font-bold text-white text-sm leading-snug">Illuminazione Industriale & Retail</p>
-                <p className="text-white/60 text-xs leading-relaxed mt-1">Progetti realizzati per:</p>
-                <div className="flex flex-wrap gap-2 text-white/50 text-xs font-semibold tracking-wide mt-1">
-                  <span>KLEPIERRE</span><span>•</span><span>CBRE</span><span>•</span><span>EUROSPIN</span><span>•</span><span>CONAD</span>
-                </div>
-              </div>
+            <div className="flex items-center gap-3 mb-1">
+              <Lightbulb className="w-4 h-4 text-orange shrink-0" />
+              <p className="font-bold text-white text-sm">Illuminazione Industriale & Retail</p>
+            </div>
+            <p className="text-white/60 text-xs leading-relaxed ml-7 mt-1">Progetti realizzati per:</p>
+            <div className="flex flex-wrap gap-2 text-white/50 text-xs font-semibold tracking-wide ml-7 mt-1.5">
+              <span>KLEPIERRE</span><span>•</span><span>CBRE</span><span>•</span><span>EUROSPIN</span><span>•</span><span>CONAD</span>
             </div>
           </motion.div>
         </div>
