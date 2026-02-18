@@ -12,22 +12,26 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen overflow-hidden">
       {/* Seamless blended background */}
       <div className="absolute inset-0">
-        {/* Left: Solar */}
-        <div className="absolute inset-0 w-full h-full">
+        {/* Split background with soft center blend */}
+        <div className="absolute inset-0">
           <img
             src={heroSolar}
             alt="Impianto fotovoltaico utility-scale"
-            className="absolute left-0 top-0 w-1/2 h-full object-cover"
+            className="absolute left-0 top-0 w-[55%] h-full object-cover brightness-110 contrast-105"
           />
           <img
             src={heroLighting}
             alt="Illuminazione professionale LED industriale"
-            className="absolute right-0 top-0 w-1/2 h-full object-cover"
+            className="absolute right-0 top-0 w-[55%] h-full object-cover brightness-110 contrast-105"
           />
         </div>
-        {/* Soft center blend */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(5,20,45,0.92)] via-[rgba(5,20,45,0.85)] to-[rgba(5,20,45,0.92)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,20,45,0.4)] via-transparent to-[rgba(5,20,45,0.7)]" />
+        {/* Cinematic soft blur */}
+        <div className="absolute inset-0 backdrop-blur-[2px]" />
+        {/* Center gradient blend – no hard line */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(5,18,40,0.95)] to-transparent" style={{ maskImage: 'linear-gradient(to right, transparent 30%, black 45%, black 55%, transparent 70%)', WebkitMaskImage: 'linear-gradient(to right, transparent 30%, black 45%, black 55%, transparent 70%)' }} />
+        {/* Navy overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(5,18,40,0.65)] via-[rgba(5,18,40,0.75)] to-[rgba(5,18,40,0.65)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,18,40,0.3)] via-transparent to-[rgba(5,18,40,0.6)]" />
       </div>
 
       {/* Content */}
