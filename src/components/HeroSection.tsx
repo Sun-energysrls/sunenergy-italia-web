@@ -10,131 +10,104 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen overflow-hidden">
-      {/* Full-width solar background */}
+      {/* Seamless blended background */}
       <div className="absolute inset-0">
-        <img
-          src={heroSolar}
-          alt="Impianto fotovoltaico utility-scale al tramonto"
-          className="absolute inset-0 w-full h-full object-cover brightness-[1.1]"
-        />
-        {/* Gradient overlay: dark left → transparent right */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to right, rgba(5,18,40,0.70) 0%, rgba(5,18,40,0.55) 35%, rgba(5,18,40,0.15) 65%, transparent 100%)",
-          }}
-        />
-        {/* Subtle top/bottom vignette */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,18,40,0.20)] via-transparent to-[rgba(5,18,40,0.30)]" />
+        {/* Split background with soft center blend */}
+        <div className="absolute inset-0">
+          <img
+            src={heroSolar}
+            alt="Impianto fotovoltaico utility-scale"
+            className="absolute left-0 top-0 w-[55%] h-full object-cover brightness-110 contrast-105"
+          />
+          <img
+            src={heroLighting}
+            alt="Illuminazione professionale LED industriale"
+            className="absolute right-0 top-0 w-[55%] h-full object-cover brightness-110 contrast-105"
+          />
+        </div>
+        {/* Cinematic soft blur */}
+        <div className="absolute inset-0 backdrop-blur-[2px]" />
+        {/* Center gradient blend – no hard line */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(5,18,40,0.95)] to-transparent" style={{ maskImage: 'linear-gradient(to right, transparent 30%, black 45%, black 55%, transparent 70%)', WebkitMaskImage: 'linear-gradient(to right, transparent 30%, black 45%, black 55%, transparent 70%)' }} />
+        {/* Navy overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(5,18,40,0.65)] via-[rgba(5,18,40,0.75)] to-[rgba(5,18,40,0.65)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,18,40,0.3)] via-transparent to-[rgba(5,18,40,0.6)]" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto h-full px-4 lg:px-8 pt-32 pb-40">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          {/* Left side – Text */}
+      <div className="relative z-10 container mx-auto h-full flex flex-col justify-center items-center text-center px-4 lg:px-8 pt-32 pb-40">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="max-w-4xl"
+        >
+          {/* Eyebrow */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex-1 max-w-2xl text-left"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex items-center justify-center gap-3 mb-8"
           >
-            {/* Eyebrow */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex items-center gap-3 mb-8"
-            >
-              <div className="h-px w-12 bg-orange" />
-              <span className="text-orange font-semibold text-sm tracking-[0.2em] uppercase">
-                Fotovoltaico & Illuminazione
-              </span>
-            </motion.div>
-
-            {/* Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6"
-            >
-              Importazione Diretta
-              <br />
-              <span className="text-orange">Fotovoltaico</span> e{" "}
-              <span className="text-orange">Illuminazione</span>
-              <br />
-              Professionale
-            </motion.h1>
-
-            {/* Subheadline */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-white/80 text-base md:text-lg lg:text-xl max-w-xl mb-10 leading-relaxed"
-            >
-              Soluzioni complete per impianti utility-scale, forniture industriali
-              LED e importazioni DDP con consegna diretta in cantiere.
-            </motion.p>
-
-            {/* CTAs */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-              className="flex flex-wrap gap-4"
-            >
-              <button
-                onClick={() => scrollTo("#contact")}
-                className="flex items-center gap-2 bg-orange text-orange-foreground px-8 py-4 rounded-lg font-semibold hover:brightness-110 transition-all text-sm md:text-base shadow-lg shadow-orange/25"
-              >
-                Richiedi Preventivo
-                <ArrowRight className="w-4 h-4" />
-              </button>
-              <button
-                onClick={() => scrollTo("#contact")}
-                className="flex items-center gap-2 border-2 border-orange text-orange px-8 py-4 rounded-lg font-semibold hover:bg-orange hover:text-orange-foreground transition-all text-sm md:text-base"
-              >
-                <Phone className="w-4 h-4" />
-                Contattaci
-              </button>
-            </motion.div>
+            <div className="h-px w-12 bg-orange" />
+            <span className="text-orange font-semibold text-sm tracking-[0.2em] uppercase">
+              Fotovoltaico & Illuminazione
+            </span>
+            <div className="h-px w-12 bg-orange" />
           </motion.div>
 
-          {/* Right side – Warehouse card */}
-          <motion.div
-            initial={{ opacity: 0, x: 40, scale: 0.95 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.6 }}
-            className="flex-1 max-w-lg w-full hidden lg:block"
+          {/* Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/30 border border-white/10">
-              <img
-                src={heroLighting}
-                alt="Magazzino industriale moderno con illuminazione LED"
-                className="w-full h-[420px] object-cover brightness-[1.05]"
-              />
-              {/* Subtle overlay on the card */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(5,18,40,0.50)] via-transparent to-[rgba(5,18,40,0.10)]" />
-              {/* Card label */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-2 h-2 rounded-full bg-orange" />
-                  <span className="text-orange font-semibold text-xs tracking-[0.15em] uppercase">
-                    Illuminazione Industriale
-                  </span>
-                </div>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Forniture LED professionali per magazzini, centri commerciali e strutture industriali.
-                </p>
-              </div>
-            </div>
+            Importazione Diretta
+            <br />
+            <span className="text-orange">Fotovoltaico</span> e{" "}
+            <span className="text-orange">Illuminazione</span>
+            <br />
+            Professionale
+          </motion.h1>
+
+          {/* Subheadline */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="text-white/75 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
+          >
+            Soluzioni complete per impianti utility-scale, forniture industriali
+            LED e importazioni DDP con consegna diretta in cantiere.
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="flex flex-wrap justify-center gap-4"
+          >
+            <button
+              onClick={() => scrollTo("#contact")}
+              className="flex items-center gap-2 bg-orange text-orange-foreground px-8 py-4 rounded-lg font-semibold hover:brightness-110 transition-all text-sm md:text-base shadow-lg shadow-orange/25"
+            >
+              Richiedi Preventivo
+              <ArrowRight className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => scrollTo("#contact")}
+              className="flex items-center gap-2 border-2 border-orange text-orange px-8 py-4 rounded-lg font-semibold hover:bg-orange hover:text-orange-foreground transition-all text-sm md:text-base"
+            >
+              <Phone className="w-4 h-4" />
+              Contatta il nostro Ufficio Commerciale
+            </button>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Floating Cards */}
-        <div className="mt-16 grid sm:grid-cols-2 gap-6 max-w-4xl w-full mx-auto lg:mx-0">
+        <div className="mt-16 grid sm:grid-cols-2 gap-6 max-w-4xl w-full">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
