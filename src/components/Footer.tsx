@@ -31,7 +31,7 @@ const Footer = () => {
                 <button
                   key={l.href}
                   onClick={() => scrollTo(l.href)}
-                  className="text-primary-foreground/60 hover:text-secondary text-sm text-left transition-colors"
+                  className="text-primary-foreground/60 hover:text-orange text-sm text-left transition-colors"
                 >
                   {l.label}
                 </button>
@@ -54,13 +54,13 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold mb-4 text-sm">Seguici</h4>
             <div className="flex gap-3 mb-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-navy-light rounded-lg flex items-center justify-center hover:bg-secondary transition-colors">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-navy-light rounded-lg flex items-center justify-center hover:bg-orange transition-colors">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-navy-light rounded-lg flex items-center justify-center hover:bg-secondary transition-colors">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-navy-light rounded-lg flex items-center justify-center hover:bg-orange transition-colors">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-navy-light rounded-lg flex items-center justify-center hover:bg-secondary transition-colors">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-navy-light rounded-lg flex items-center justify-center hover:bg-orange transition-colors">
                 <Linkedin className="w-4 h-4" />
               </a>
             </div>
