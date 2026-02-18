@@ -101,7 +101,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.1 }}
-            className="group backdrop-blur-xl bg-white/10 border border-white/15 rounded-2xl p-6 shadow-2xl transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.4)] hover:bg-white/[0.13]"
+            className="group text-left backdrop-blur-xl bg-white/10 border border-white/15 rounded-2xl p-6 shadow-2xl transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.4)] hover:bg-white/[0.13]"
           >
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 bg-orange/20 rounded-lg flex items-center justify-center transition-transform duration-300 ease-out group-hover:scale-105">
@@ -118,7 +118,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.3 }}
-            className="group backdrop-blur-xl bg-white/10 border border-white/15 rounded-2xl p-6 shadow-2xl transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.4)] hover:bg-white/[0.13]"
+            className="group text-left backdrop-blur-xl bg-white/10 border border-white/15 rounded-2xl p-6 shadow-2xl transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.4)] hover:bg-white/[0.13]"
           >
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 bg-orange/20 rounded-lg flex items-center justify-center transition-transform duration-300 ease-out group-hover:scale-105">
