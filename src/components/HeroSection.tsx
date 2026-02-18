@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Ship, Handshake } from "lucide-react";
-import heroSolar from "@/assets/hero-solar-plant.jpg";
-import heroLighting from "@/assets/hero-lighting.jpg";
+import heroBg from "@/assets/hero-combined.png";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
@@ -12,26 +11,16 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen overflow-hidden">
       {/* Seamless blended background */}
       <div className="absolute inset-0">
-        {/* Single container with both images blended via gradient masks */}
-        <div className="absolute inset-0">
-          <img
-            src={heroSolar}
-            alt="Impianto fotovoltaico utility-scale"
-            className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-105"
-            style={{ maskImage: 'linear-gradient(to right, black 30%, transparent 60%)', WebkitMaskImage: 'linear-gradient(to right, black 30%, transparent 60%)' }}
-          />
-          <img
-            src={heroLighting}
-            alt="Illuminazione professionale LED industriale"
-            className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-105"
-            style={{ maskImage: 'linear-gradient(to left, black 30%, transparent 60%)', WebkitMaskImage: 'linear-gradient(to left, black 30%, transparent 60%)' }}
-          />
-        </div>
-        {/* Soft blur */}
-        <div className="absolute inset-0 backdrop-blur-[1px]" />
-        {/* Navy overlay for readability */}
+        <img
+          src={heroBg}
+          alt="Fotovoltaico e illuminazione industriale"
+          className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-110 saturate-105"
+        />
+        {/* Minimal blur for readability */}
+        <div className="absolute inset-0 backdrop-blur-[0.5px]" />
+        {/* Navy overlay 55% */}
         <div className="absolute inset-0 bg-[rgba(5,18,40,0.55)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,18,40,0.2)] via-transparent to-[rgba(5,18,40,0.45)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,18,40,0.15)] via-transparent to-[rgba(5,18,40,0.35)]" />
       </div>
 
       {/* Content */}
