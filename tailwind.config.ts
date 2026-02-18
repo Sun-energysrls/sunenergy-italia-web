@@ -61,7 +61,10 @@ export default {
           light: "hsl(var(--green-light))",
           dark: "hsl(var(--green-dark))",
         },
-        orange: "hsl(var(--orange))",
+        orange: {
+          DEFAULT: "hsl(var(--orange))",
+          foreground: "hsl(var(--orange-foreground))",
+        },
         "gray-warm": "hsl(var(--gray-warm))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
