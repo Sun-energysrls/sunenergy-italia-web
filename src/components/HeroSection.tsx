@@ -128,24 +128,27 @@ const HeroSection = () => {
             </div>
 
             {/* Photovoltaic section */}
-            <div className="flex items-start gap-2.5 mb-3">
-              <Sun className="w-4 h-4 text-orange mt-0.5 shrink-0" />
+            <div className="flex items-start gap-3">
+              <div className="w-5 h-5 mt-0.5 shrink-0 flex items-center justify-center">
+                <Sun className="w-4 h-4 text-orange" />
+              </div>
               <div>
-                <p className="font-semibold text-white text-sm">Photovoltaic Utility-Scale</p>
-                <p className="text-white/60 text-xs leading-relaxed">Over 25 MW installed across Italy.</p>
+                <p className="font-bold text-white text-sm leading-snug">Fotovoltaico Utility-Scale</p>
+                <p className="text-white/60 text-xs leading-relaxed mt-1">Oltre 25 MW installati in tutta Italia.</p>
               </div>
             </div>
 
-            {/* Divider */}
-            <div className="h-px bg-white/10 my-2.5" />
+            <div className="h-6" />
 
             {/* Lighting section */}
-            <div className="flex items-start gap-2.5">
-              <Lightbulb className="w-4 h-4 text-orange mt-0.5 shrink-0" />
+            <div className="flex items-start gap-3">
+              <div className="w-5 h-5 mt-0.5 shrink-0 flex items-center justify-center">
+                <Lightbulb className="w-4 h-4 text-orange" />
+              </div>
               <div>
-                <p className="font-semibold text-white text-sm">Industrial & Retail Lighting</p>
-                <p className="text-white/60 text-xs leading-relaxed mb-1">Projects delivered for:</p>
-                <div className="flex flex-wrap gap-2 text-white/50 text-xs font-semibold tracking-wide">
+                <p className="font-bold text-white text-sm leading-snug">Illuminazione Industriale & Retail</p>
+                <p className="text-white/60 text-xs leading-relaxed mt-1">Progetti realizzati per:</p>
+                <div className="flex flex-wrap gap-2 text-white/50 text-xs font-semibold tracking-wide mt-1">
                   <span>KLEPIERRE</span><span>•</span><span>CBRE</span><span>•</span><span>EUROSPIN</span><span>•</span><span>CONAD</span>
                 </div>
               </div>
