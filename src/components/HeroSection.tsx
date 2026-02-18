@@ -1,107 +1,118 @@
-import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import heroImg1 from "@/assets/hero-solar-1.jpg";
-import heroImg2 from "@/assets/hero-solar-2.jpg";
-import heroImg3 from "@/assets/hero-solar-3.jpg";
-
-const slides = [heroImg1, heroImg2, heroImg3];
+import { motion } from "framer-motion";
+import { ArrowRight, Phone } from "lucide-react";
+import heroSolar from "@/assets/hero-solar-plant.jpg";
+import heroLighting from "@/assets/hero-lighting.jpg";
 
 const HeroSection = () => {
-  const [current, setCurrent] = useState(0);
-
-  const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
-  const prev = useCallback(() => setCurrent((c) => (c - 1 + slides.length) % slides.length), []);
-
-  useEffect(() => {
-    const timer = setInterval(next, 5000);
-    return () => clearInterval(timer);
-  }, [next]);
-
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section id="home" className="relative h-screen min-h-[600px] overflow-hidden">
-      {/* Background slideshow */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={current}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0"
-        >
+    <section id="home" className="relative h-screen min-h-[700px] overflow-hidden">
+      {/* Split background */}
+      <div className="absolute inset-0 flex">
+        {/* Left: Solar */}
+        <div className="relative w-1/2">
           <img
-            src={slides[current]}
-            alt="Impianto fotovoltaico SunEnergy"
+            src={heroSolar}
+            alt="Impianto fotovoltaico utility-scale"
             className="w-full h-full object-cover"
           />
-        </motion.div>
-      </AnimatePresence>
+          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(5,30,50,0.88)] to-[rgba(5,30,50,0.75)]" />
+        </div>
+        {/* Right: Lighting */}
+        <div className="relative w-1/2">
+          <img
+            src={heroLighting}
+            alt="Illuminazione professionale LED industriale"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-[rgba(5,30,50,0.88)] to-[rgba(5,30,50,0.75)]" />
+        </div>
+      </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-hero-overlay" />
+      {/* Center blend overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,30,50,0.3)] via-transparent to-[rgba(5,30,50,0.6)]" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto h-full flex flex-col justify-center px-4">
+      <div className="relative z-10 container mx-auto h-full flex flex-col justify-center px-4 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="max-w-3xl"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="max-w-4xl"
         >
-          <span className="inline-block bg-secondary/30 text-white px-4 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm border border-secondary/40">
-            Energia Solare Utility-Scale
-          </span>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
-            Soluzioni Fotovoltaiche
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex items-center gap-3 mb-8"
+          >
+            <div className="h-px w-12 bg-orange" />
+            <span className="text-orange font-semibold text-sm tracking-[0.2em] uppercase">
+              Fotovoltaico & Illuminazione
+            </span>
+          </motion.div>
+
+          {/* Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6"
+          >
+            Importazione Diretta
             <br />
-            <span className="text-secondary drop-shadow-md">su Larga Scala</span>
-          </h1>
-          <p className="text-white/90 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed drop-shadow-sm">
-            Partner affidabile per impianti fotovoltaici utility-scale, import/export di componenti 
-            e servizi EPC. Progettiamo il futuro energetico con competenza e innovazione.
-          </p>
-          <div className="flex flex-wrap gap-4">
+            <span className="text-orange">Fotovoltaico</span> e{" "}
+            <span className="text-orange">Illuminazione</span>
+            <br />
+            Professionale
+          </motion.h1>
+
+          {/* Subheadline */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="text-white/80 text-base md:text-lg lg:text-xl max-w-2xl mb-10 leading-relaxed"
+          >
+            Soluzioni complete per impianti utility-scale, forniture industriali
+            LED e importazioni DDP con consegna diretta in cantiere.
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="flex flex-wrap gap-4"
+          >
             <button
               onClick={() => scrollTo("#contact")}
-              className="flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-3.5 rounded-lg font-semibold hover:bg-green-light transition-colors text-sm"
+              className="flex items-center gap-2 bg-orange text-orange-foreground px-8 py-4 rounded-lg font-semibold hover:brightness-110 transition-all text-sm md:text-base shadow-lg shadow-orange/25"
             >
-              Richiedi Consulenza
+              Richiedi Preventivo
               <ArrowRight className="w-4 h-4" />
             </button>
             <button
-              onClick={() => scrollTo("#services")}
-              className="flex items-center gap-2 border-2 border-primary-foreground/30 text-primary-foreground px-8 py-3.5 rounded-lg font-semibold hover:border-secondary hover:text-secondary transition-colors text-sm"
+              onClick={() => scrollTo("#contact")}
+              className="flex items-center gap-2 border-2 border-orange text-orange px-8 py-4 rounded-lg font-semibold hover:bg-orange hover:text-orange-foreground transition-all text-sm md:text-base"
             >
-              I Nostri Servizi
+              <Phone className="w-4 h-4" />
+              Contatta il nostro ufficio commerciale
             </button>
-          </div>
+          </motion.div>
         </motion.div>
 
-        {/* Slide controls */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4">
-          <button onClick={prev} className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <div className="flex gap-2">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`w-2.5 h-2.5 rounded-full transition-all ${
-                  i === current ? "bg-secondary w-8" : "bg-primary-foreground/40"
-                }`}
-              />
-            ))}
-          </div>
-          <button onClick={next} className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
+        {/* Bottom accent line */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1.2, delay: 1.2 }}
+          className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange via-orange/50 to-transparent origin-left"
+        />
       </div>
     </section>
   );
