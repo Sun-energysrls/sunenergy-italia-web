@@ -12,25 +12,25 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen overflow-hidden">
       {/* Seamless blended background */}
       <div className="absolute inset-0">
-        {/* Split background with soft center blend */}
+        {/* Single container with both images blended via gradient masks */}
         <div className="absolute inset-0">
           <img
             src={heroSolar}
             alt="Impianto fotovoltaico utility-scale"
-            className="absolute left-0 top-0 w-[55%] h-full object-cover brightness-110 contrast-105"
+            className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-105"
+            style={{ maskImage: 'linear-gradient(to right, black 30%, transparent 60%)', WebkitMaskImage: 'linear-gradient(to right, black 30%, transparent 60%)' }}
           />
           <img
             src={heroLighting}
             alt="Illuminazione professionale LED industriale"
-            className="absolute right-0 top-0 w-[55%] h-full object-cover brightness-110 contrast-105"
+            className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-105"
+            style={{ maskImage: 'linear-gradient(to left, black 30%, transparent 60%)', WebkitMaskImage: 'linear-gradient(to left, black 30%, transparent 60%)' }}
           />
         </div>
-        {/* Cinematic soft blur – reduced */}
+        {/* Soft blur */}
         <div className="absolute inset-0 backdrop-blur-[1px]" />
-        {/* Center gradient blend – soft, no hard line */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(5,18,40,0.7)] to-transparent" style={{ maskImage: 'linear-gradient(to right, transparent 35%, black 48%, black 52%, transparent 65%)', WebkitMaskImage: 'linear-gradient(to right, transparent 35%, black 48%, black 52%, transparent 65%)' }} />
-        {/* Navy overlay for readability – lighter */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(5,18,40,0.50)] via-[rgba(5,18,40,0.58)] to-[rgba(5,18,40,0.50)]" />
+        {/* Navy overlay for readability */}
+        <div className="absolute inset-0 bg-[rgba(5,18,40,0.55)]" />
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,18,40,0.2)] via-transparent to-[rgba(5,18,40,0.45)]" />
       </div>
 
