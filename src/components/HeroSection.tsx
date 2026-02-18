@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Ship, Handshake } from "lucide-react";
 import heroSolar from "@/assets/hero-solar-plant.jpg";
-import heroLighting from "@/assets/hero-lighting.jpg";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
@@ -10,27 +9,15 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen overflow-hidden">
-      {/* Seamless blended background */}
+      {/* Single full-width background */}
       <div className="absolute inset-0">
-        {/* Split background images – overlap in center for soft blend */}
-        <div className="absolute inset-0">
-          <img
-            src={heroSolar}
-            alt="Impianto fotovoltaico utility-scale"
-            className="absolute left-0 top-0 w-[58%] h-full object-cover brightness-[1.15] contrast-[1.05]"
-          />
-          <img
-            src={heroLighting}
-            alt="Illuminazione professionale LED industriale"
-            className="absolute right-0 top-0 w-[58%] h-full object-cover brightness-[1.1] contrast-[1.02]"
-          />
-          {/* Soft center fade – blends the two images seamlessly */}
-          <div className="absolute inset-0" style={{
-            background: 'linear-gradient(to right, transparent 35%, rgba(5,18,40,0.85) 46%, rgba(5,18,40,0.85) 54%, transparent 65%)',
-          }} />
-        </div>
-        {/* Very light navy overlay – max 35% for readability without darkening */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(5,18,40,0.35)] via-[rgba(5,18,40,0.40)] to-[rgba(5,18,40,0.35)]" />
+        <img
+          src={heroSolar}
+          alt="Impianto fotovoltaico utility-scale al tramonto"
+          className="absolute inset-0 w-full h-full object-cover brightness-[1.1]"
+        />
+        {/* Light navy overlay – max 30% for readability */}
+        <div className="absolute inset-0 bg-[rgba(5,18,40,0.30)]" />
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,18,40,0.15)] via-transparent to-[rgba(5,18,40,0.35)]" />
       </div>
 
