@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Ship, Handshake } from "lucide-react";
+import { ArrowRight, Phone, Ship, Handshake, Sun, Lightbulb } from "lucide-react";
 import heroBg from "@/assets/hero-combined.png";
 
 const HeroSection = () => {
@@ -101,10 +101,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.1 }}
-            className="backdrop-blur-xl bg-white/10 border border-white/15 rounded-2xl p-6 shadow-2xl"
+            className="group backdrop-blur-xl bg-white/10 border border-white/15 rounded-2xl p-6 shadow-2xl transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.4)] hover:bg-white/[0.13]"
           >
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-orange/20 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-orange/20 rounded-lg flex items-center justify-center transition-transform duration-300 ease-out group-hover:scale-105">
                 <Ship className="w-5 h-5 text-orange" />
               </div>
               <h3 className="font-display font-bold text-white text-lg">Importazione Diretta DDP</h3>
@@ -118,25 +118,37 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.3 }}
-            className="backdrop-blur-xl bg-white/10 border border-white/15 rounded-2xl p-6 shadow-2xl"
+            className="group backdrop-blur-xl bg-white/10 border border-white/15 rounded-2xl p-6 shadow-2xl transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.4)] hover:bg-white/[0.13]"
           >
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-orange/20 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-orange/20 rounded-lg flex items-center justify-center transition-transform duration-300 ease-out group-hover:scale-105">
                 <Handshake className="w-5 h-5 text-orange" />
               </div>
               <h3 className="font-display font-bold text-white text-lg">Collaborazioni B2B di Prestigio</h3>
             </div>
-            <p className="text-white/65 text-sm leading-relaxed mb-3">
-              Oltre 25 MW installati in tutta Italia con partner di primo livello nel retail e nella GDO.
-            </p>
-            <div className="flex flex-wrap gap-3 text-white/50 text-xs font-semibold tracking-wide">
-              <span>KLEPIERRE</span>
-              <span>•</span>
-              <span>CBRE</span>
-              <span>•</span>
-              <span>EUROSPIN</span>
-              <span>•</span>
-              <span>CONAD</span>
+
+            {/* Photovoltaic section */}
+            <div className="flex items-start gap-2.5 mb-3">
+              <Sun className="w-4 h-4 text-orange mt-0.5 shrink-0" />
+              <div>
+                <p className="font-semibold text-white text-sm">Photovoltaic Utility-Scale</p>
+                <p className="text-white/60 text-xs leading-relaxed">Over 25 MW installed across Italy.</p>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="h-px bg-white/10 my-2.5" />
+
+            {/* Lighting section */}
+            <div className="flex items-start gap-2.5">
+              <Lightbulb className="w-4 h-4 text-orange mt-0.5 shrink-0" />
+              <div>
+                <p className="font-semibold text-white text-sm">Industrial & Retail Lighting</p>
+                <p className="text-white/60 text-xs leading-relaxed mb-1">Projects delivered for:</p>
+                <div className="flex flex-wrap gap-2 text-white/50 text-xs font-semibold tracking-wide">
+                  <span>KLEPIERRE</span><span>•</span><span>CBRE</span><span>•</span><span>EUROSPIN</span><span>•</span><span>CONAD</span>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
