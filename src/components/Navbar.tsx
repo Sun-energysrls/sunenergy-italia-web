@@ -47,14 +47,14 @@ const Navbar = () => {
             <button
               key={item.href}
               onClick={() => scrollTo(item.href)}
-              className="text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors"
+              className="text-sm font-medium text-primary-foreground/80 hover:text-orange transition-colors"
             >
               {item.label}
             </button>
           ))}
           <a
             href="tel:+390000000000"
-            className="flex items-center gap-2 bg-secondary text-secondary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-green-light transition-colors"
+            className="flex items-center gap-2 bg-orange text-orange-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:brightness-110 transition-colors"
           >
             <Phone className="w-4 h-4" />
             Chiamaci
@@ -84,14 +84,14 @@ const Navbar = () => {
                 <button
                   key={item.href}
                   onClick={() => scrollTo(item.href)}
-                  className="text-primary-foreground/80 hover:text-secondary text-left py-2 text-sm font-medium transition-colors"
+                  className="text-primary-foreground/80 hover:text-orange text-left py-2 text-sm font-medium transition-colors"
                 >
                   {item.label}
                 </button>
               ))}
               <a
                 href="tel:+390000000000"
-                className="flex items-center gap-2 bg-secondary text-secondary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold w-fit"
+                className="flex items-center gap-2 bg-orange text-orange-foreground px-5 py-2.5 rounded-lg text-sm font-semibold w-fit"
               >
                 <Phone className="w-4 h-4" />
                 Chiamaci

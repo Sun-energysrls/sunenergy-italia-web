@@ -109,7 +109,7 @@ const ContactSection = () => {
             </div>
             <button
               type="submit"
-              className="flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-3.5 rounded-lg font-semibold hover:bg-green-light transition-colors text-sm"
+              className="flex items-center gap-2 bg-orange text-orange-foreground px-8 py-3.5 rounded-lg font-semibold hover:brightness-110 transition-colors text-sm"
             >
               <Send className="w-4 h-4" />
               Invia Messaggio
