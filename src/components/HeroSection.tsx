@@ -25,13 +25,13 @@ const HeroSection = () => {
             className="absolute right-0 top-0 w-[55%] h-full object-cover brightness-110 contrast-105"
           />
         </div>
-        {/* Cinematic soft blur */}
-        <div className="absolute inset-0 backdrop-blur-[2px]" />
-        {/* Center gradient blend – no hard line */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(5,18,40,0.95)] to-transparent" style={{ maskImage: 'linear-gradient(to right, transparent 30%, black 45%, black 55%, transparent 70%)', WebkitMaskImage: 'linear-gradient(to right, transparent 30%, black 45%, black 55%, transparent 70%)' }} />
-        {/* Navy overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(5,18,40,0.65)] via-[rgba(5,18,40,0.75)] to-[rgba(5,18,40,0.65)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,18,40,0.3)] via-transparent to-[rgba(5,18,40,0.6)]" />
+        {/* Cinematic soft blur – reduced */}
+        <div className="absolute inset-0 backdrop-blur-[1px]" />
+        {/* Center gradient blend – soft, no hard line */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(5,18,40,0.7)] to-transparent" style={{ maskImage: 'linear-gradient(to right, transparent 35%, black 48%, black 52%, transparent 65%)', WebkitMaskImage: 'linear-gradient(to right, transparent 35%, black 48%, black 52%, transparent 65%)' }} />
+        {/* Navy overlay for readability – lighter */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(5,18,40,0.50)] via-[rgba(5,18,40,0.58)] to-[rgba(5,18,40,0.50)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,18,40,0.2)] via-transparent to-[rgba(5,18,40,0.45)]" />
       </div>
 
       {/* Content */}
