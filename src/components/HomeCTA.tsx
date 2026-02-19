@@ -28,13 +28,13 @@ const HomeCTA = () => {
               Richiedi Preventivo
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link
-              to="/contatti"
+            <a
+              href="tel:+393338590639"
               className="flex items-center gap-2 border-2 border-orange text-orange px-8 py-4 rounded-lg font-semibold hover:bg-orange hover:text-orange-foreground transition-all text-sm md:text-base"
             >
               <Phone className="w-4 h-4" />
               Contatta il Team
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>
