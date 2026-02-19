@@ -1,31 +1,37 @@
 import { motion } from "framer-motion";
 import { Home, Sun, Factory, Sparkles, Cable, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const categories = [
   {
     icon: Home,
     title: "Interni",
     desc: "Soluzioni LED per ambienti residenziali e commerciali.",
+    href: "/illuminazione/interni",
   },
   {
     icon: Sun,
     title: "Esterni",
     desc: "Illuminazione outdoor, stradale e architetturale.",
+    href: "/illuminazione/esterni",
   },
   {
     icon: Factory,
     title: "Illuminazione Professionale",
     desc: "Impianti LED per industria, sport e retail.",
+    href: "/illuminazione/professionale",
   },
   {
     icon: Sparkles,
     title: "Luci Decorative",
     desc: "Soluzioni estetiche per ambienti domestici e hospitality.",
+    href: "/illuminazione/decorative",
   },
   {
     icon: Cable,
     title: "Materiale Elettrico",
     desc: "Componentistica e sistemi di supporto elettrico.",
+    href: "/illuminazione/materiale-elettrico",
   },
 ];
 
@@ -67,10 +73,13 @@ const IlCategorieSection = () => {
               <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                 {cat.desc}
               </p>
-              <span className="inline-flex items-center gap-1.5 text-secondary text-sm font-semibold group-hover:gap-3 transition-all">
+              <Link
+                to={cat.href}
+                className="inline-flex items-center gap-1.5 text-secondary text-sm font-semibold group-hover:gap-3 transition-all"
+              >
                 Scopri di più
                 <ArrowRight className="w-4 h-4" />
-              </span>
+              </Link>
             </motion.div>
           ))}
         </div>
