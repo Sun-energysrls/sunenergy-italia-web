@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const IlCtaSection = () => {
@@ -14,18 +14,27 @@ const IlCtaSection = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            Sei un installatore o un general contractor?
+            Cerchi un partner per forniture illuminotecniche?
           </h2>
           <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-10">
-            Richiedi una fornitura illuminotecnica dedicata.
+            Soluzioni professionali per retail, GDO, industria e progettazione architettonica.
           </p>
-          <Link
-            to="/contatti"
-            className="inline-flex items-center gap-2 bg-orange text-orange-foreground px-8 py-4 rounded-lg font-semibold hover:brightness-110 transition-all text-sm md:text-base shadow-lg shadow-orange/25"
-          >
-            Richiedi Preventivo
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              to="/contatti"
+              className="inline-flex items-center gap-2 bg-orange text-orange-foreground px-8 py-4 rounded-lg font-semibold hover:brightness-110 transition-all text-sm md:text-base shadow-lg shadow-orange/25"
+            >
+              Richiedi Fornitura Illuminazione
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a
+              href="tel:+393338590639"
+              className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary-foreground/10 transition-all text-sm md:text-base"
+            >
+              <Phone className="w-4 h-4" />
+              Parla con un Consulente
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

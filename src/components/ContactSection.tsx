@@ -139,13 +139,13 @@ const ContactSection = () => {
                   <p className="text-muted-foreground text-sm">+39 333 859 0639</p>
                 </div>
               </a>
-              <a href="mailto:riccardo.leandri@yahoo.it" className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors">
+              <a href="mailto:s.energysrls@gmail.com" className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors">
                 <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
                   <Mail className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
                   <p className="text-sm font-medium">Email</p>
-                  <p className="text-muted-foreground text-sm">riccardo.leandri@yahoo.it</p>
+                  <p className="text-muted-foreground text-sm">s.energysrls@gmail.com</p>
                 </div>
               </a>
               <a href="mailto:sun-energysrls@pec.it" className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors">

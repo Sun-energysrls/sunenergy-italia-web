@@ -57,7 +57,7 @@ ${message}`;
       },
       body: JSON.stringify({
         from: "Sun Energy <onboarding@resend.dev>",
-        to: ["riccardo.leandri@yahoo.it"],
+        to: ["s.energysrls@gmail.com"],
         subject: "Nuova richiesta dal sito Sun Energy",
         text: emailBody,
         reply_to: email,

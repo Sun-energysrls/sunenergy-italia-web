@@ -61,8 +61,8 @@ const Footer = () => {
                 <Linkedin className="w-4 h-4" />
               </a>
             </div>
-            <a href="mailto:riccardo.leandri@yahoo.it" className="text-primary-foreground/60 text-sm hover:text-orange transition-colors">
-              riccardo.leandri@yahoo.it
+            <a href="mailto:s.energysrls@gmail.com" className="text-primary-foreground/60 text-sm hover:text-orange transition-colors">
+              s.energysrls@gmail.com
             </a>
             <br />
             <a href="tel:+393338590639" className="text-primary-foreground/60 text-sm hover:text-orange transition-colors">
@@ -80,7 +80,7 @@ const Footer = () => {
               P.IVA: 02136450661 &nbsp;|&nbsp; EORI: IT02136450661
             </p>
             <p>
-              Email: <a href="mailto:riccardo.leandri@yahoo.it" className="hover:text-primary-foreground/70 transition-colors">riccardo.leandri@yahoo.it</a>
+              Email: <a href="mailto:s.energysrls@gmail.com" className="hover:text-primary-foreground/70 transition-colors">s.energysrls@gmail.com</a>
               &nbsp;|&nbsp;
               PEC: <a href="mailto:sun-energysrls@pec.it" className="hover:text-primary-foreground/70 transition-colors">sun-energysrls@pec.it</a>
               &nbsp;|&nbsp;
