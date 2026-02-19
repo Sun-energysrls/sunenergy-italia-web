@@ -1,11 +1,8 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/sunenergy-logo.png";
 
 const Footer = () => {
-  const scrollTo = (id: string) => {
-    document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <footer className="bg-navy-dark text-primary-foreground">
       <div className="container mx-auto py-12 px-4">
@@ -23,18 +20,18 @@ const Footer = () => {
             <h4 className="font-display font-semibold mb-4 text-sm">Link Rapidi</h4>
             <div className="flex flex-col gap-2">
               {[
-                { label: "Home", href: "#home" },
-                { label: "Chi Siamo", href: "#about" },
-                { label: "Servizi", href: "#services" },
-                { label: "Progetti", href: "#projects" },
+                { label: "Home", href: "/" },
+                { label: "Fotovoltaico", href: "/fotovoltaico" },
+                { label: "Illuminazione", href: "/illuminazione" },
+                { label: "Contatti", href: "/contatti" },
               ].map((l) => (
-                <button
+                <Link
                   key={l.href}
-                  onClick={() => scrollTo(l.href)}
+                  to={l.href}
                   className="text-primary-foreground/60 hover:text-orange text-sm text-left transition-colors"
                 >
                   {l.label}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
@@ -45,7 +42,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2 text-primary-foreground/60 text-sm">
               <span>Impianti Utility-Scale</span>
               <span>Import/Export PV</span>
-              <span>Servizi EPC</span>
+              <span>Illuminazione LED</span>
               <span>Consulenza Tecnica</span>
             </div>
           </div>
