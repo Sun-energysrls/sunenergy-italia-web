@@ -32,7 +32,7 @@ const PvBrandSlider = ({ brands }: { brands: typeof pvBrands }) => {
         {doubled.map((brand, i) => (
           <div
             key={`${brand.name}-${i}`}
-            className="flex-shrink-0 flex items-center justify-center px-6 py-4 transition-all duration-300 opacity-70 hover:opacity-100 hover:scale-105 grayscale brightness-200 hover:grayscale-0 hover:brightness-100"
+            className="flex-shrink-0 flex items-center justify-center px-6 py-4 transition-all duration-300 ease-in-out hover:scale-105 hover:drop-shadow-lg"
           >
             <img
               src={brand.logo}
@@ -93,17 +93,21 @@ const HomeBrands = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-4"
+          className="mb-16"
         >
-          <h3 className="font-display font-semibold text-foreground text-sm uppercase tracking-wider mb-5 text-center">
+          <h3 className="font-display font-semibold text-foreground text-sm uppercase tracking-wider mb-6 text-center">
             Fotovoltaico
           </h3>
           <PvBrandSlider brands={pvBrands} />
-          <p className="text-center text-xs text-muted-foreground/60 mt-4">
-            Moduli Europei per la Transizione 5.0
-            <br />
-            (Bisol, Aiko e altri produttori certificati UE)
-          </p>
+          <div className="mt-8 text-center">
+            <div className="w-12 h-px bg-orange/40 mx-auto mb-4" />
+            <p className="text-sm md:text-base font-bold text-foreground">
+              Moduli Europei per la <span className="text-orange">Transizione 5.0</span>
+            </p>
+            <p className="text-xs md:text-sm text-muted-foreground mt-1">
+              (Bisol, Aiko e altri produttori certificati UE)
+            </p>
+          </div>
         </motion.div>
 
         {/* LED */}
@@ -112,8 +116,9 @@ const HomeBrands = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-4"
         >
-          <h3 className="font-display font-semibold text-foreground text-sm uppercase tracking-wider mb-5 text-center">
+          <h3 className="font-display font-semibold text-foreground text-sm uppercase tracking-wider mb-6 text-center">
             Illuminazione
           </h3>
           <BrandSlider brands={ledBrands} direction="right" />
