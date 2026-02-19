@@ -24,20 +24,22 @@ const PvBrandSlider = ({ brands }: { brands: typeof pvBrands }) => {
   const doubled = [...brands, ...brands];
 
   return (
-    <div className="overflow-hidden group">
+    <div className="overflow-hidden group py-2">
       <div
-        className="flex gap-6 animate-scroll-left group-hover:[animation-play-state:paused]"
+        className="flex gap-8 animate-scroll-left group-hover:[animation-play-state:paused]"
         style={{ width: "max-content" }}
       >
         {doubled.map((brand, i) => (
           <div
             key={`${brand.name}-${i}`}
-            className="flex-shrink-0 w-[230px] h-[130px] bg-card border border-border rounded-2xl shadow-sm flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
+            className="flex-shrink-0 w-[280px] md:w-[300px] bg-card border border-border shadow-md flex items-center justify-center transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-xl"
+            style={{ borderRadius: "20px", padding: "32px 36px" }}
           >
             <img
               src={brand.logo}
               alt={brand.name}
-              className="h-14 md:h-16 w-auto object-contain max-w-[160px]"
+              className="w-auto object-contain max-w-[70%]"
+              style={{ height: "clamp(70px, 8vw, 90px)" }}
             />
           </div>
         ))}
