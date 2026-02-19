@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FvHeroSection from "@/components/fotovoltaico/FvHeroSection";
+import FvBanner from "@/components/fotovoltaico/FvBanner";
 import FvModuliSection from "@/components/fotovoltaico/FvModuliSection";
 import FvTransizione from "@/components/fotovoltaico/FvTransizione";
 import FvInverterSection from "@/components/fotovoltaico/FvInverterSection";
@@ -12,6 +13,7 @@ const Fotovoltaico = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <FvHeroSection />
+      <FvBanner />
       <FvModuliSection />
       <FvTransizione />
       <FvInverterSection />
