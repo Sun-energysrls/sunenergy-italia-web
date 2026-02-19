@@ -37,13 +37,9 @@ const FvHeroSection = () => {
             <span className="text-orange">Professionali</span>
           </h1>
 
-          <p className="text-primary-foreground/75 text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed mb-4">
+          <p className="text-primary-foreground/75 text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed mb-10">
             Fornitura diretta di moduli, inverter e sistemi di accumulo per
             impianti utility-scale, commerciali e industriali.
-          </p>
-
-          <p className="text-primary-foreground/50 text-sm md:text-base max-w-xl leading-relaxed mb-10">
-            Soluzioni complete per impianti fotovoltaici residenziali, commerciali e utility-scale.
           </p>
 
           <Link
