@@ -62,23 +62,24 @@ const IlCategorieSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group"
             >
-              <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-5">
-                <cat.icon className="w-6 h-6 text-secondary" />
-              </div>
-              <h3 className="font-display font-bold text-foreground text-xl mb-3">
-                {cat.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-5">
-                {cat.desc}
-              </p>
               <Link
                 to={cat.href}
-                className="inline-flex items-center gap-1.5 text-secondary text-sm font-semibold group-hover:gap-3 transition-all"
+                className="block bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group h-full"
               >
-                Scopri di più
-                <ArrowRight className="w-4 h-4" />
+                <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-5">
+                  <cat.icon className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="font-display font-bold text-foreground text-xl mb-3">
+                  {cat.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+                  {cat.desc}
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-secondary text-sm font-semibold group-hover:gap-3 transition-all">
+                  Scopri di più
+                  <ArrowRight className="w-4 h-4" />
+                </span>
               </Link>
             </motion.div>
           ))}
