@@ -8,42 +8,37 @@ const categories = [
     title: "Interni",
     desc: "Soluzioni LED per ambienti residenziali e commerciali.",
     href: "/illuminazione/interni",
-    subs: ["Downlight LED", "Plafoniere LED", "Pannelli LED", "Strisce LED", "Faretti LED da Binario", "Barre LED Lineari", "Domotica", "Ventilatori da Soffitto", "Lampade e Decorazione LED", "Segnapasso LED", "Applique LED"],
   },
   {
     icon: Sun,
     title: "Esterni",
     desc: "Illuminazione outdoor, stradale e architetturale.",
     href: "/illuminazione/esterni",
-    subs: ["Proiettori LED", "Segnapasso LED", "Applique LED", "Plafoniere LED", "Strisce LED", "Stradale", "Faretti Piscine", "Lampade Esterni", "Ghirlande LED", "Mobili LED", "Solare"],
   },
   {
     icon: Factory,
     title: "Illuminazione Professionale",
     desc: "Impianti LED per industria, sport e retail.",
     href: "/illuminazione/professionale",
-    subs: ["Industriale", "Proiettori Esterni", "Negozi", "Pannelli LED", "Stradale", "Sportiva", "Emergenza", "Eventi", "Energia Solare"],
   },
   {
     icon: Sparkles,
     title: "Luci Decorative",
     desc: "Soluzioni estetiche per ambienti domestici e hospitality.",
     href: "/illuminazione/decorative",
-    subs: ["Soggiorno", "Camera da Letto", "Cucina", "Terrazzo", "Giardino", "Bagno", "Scale", "Garage"],
   },
   {
     icon: Cable,
     title: "Materiale Elettrico",
     desc: "Componentistica e sistemi di supporto elettrico.",
     href: "/illuminazione/materiale-elettrico",
-    subs: ["Cablaggio", "Cavi Elettrici", "Quadri Elettrici", "Interruttori", "Connettori", "Meccanismi", "Domotica", "Sicurezza"],
   },
 ];
 
 const IlCategorieSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="section-padding bg-background">
+      <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,17 +73,6 @@ const IlCategorieSection = () => {
               <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                 {cat.desc}
               </p>
-
-              {/* Microcategorie */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1.5 mb-5">
-                {cat.subs.map((sub) => (
-                  <span key={sub} className="text-muted-foreground text-xs flex items-start gap-1.5">
-                    <span className="text-secondary mt-0.5">•</span>
-                    {sub}
-                  </span>
-                ))}
-              </div>
-
               <Link
                 to={cat.href}
                 className="inline-flex items-center gap-1.5 text-secondary text-sm font-semibold group-hover:gap-3 transition-all"
