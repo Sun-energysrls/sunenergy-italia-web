@@ -170,13 +170,13 @@ const CategoryPageLayout = ({
                 Richiedi Preventivo
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link
-                to="/contatti"
+              <a
+                href="tel:+393338590639"
                 className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary-foreground/10 transition-all text-sm md:text-base"
               >
                 <Phone className="w-4 h-4" />
                 Contattaci
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

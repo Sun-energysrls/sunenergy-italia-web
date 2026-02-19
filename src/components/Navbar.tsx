@@ -51,7 +51,7 @@ const Navbar = () => {
             </Link>
           ))}
           <a
-            href="tel:+390000000000"
+            href="tel:+393338590639"
             className="flex items-center gap-2 bg-orange text-orange-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:brightness-110 transition-colors"
           >
             <Phone className="w-4 h-4" />
@@ -93,7 +93,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <a
-                href="tel:+390000000000"
+                href="tel:+393338590639"
                 className="flex items-center gap-2 bg-orange text-orange-foreground px-5 py-2.5 rounded-lg text-sm font-semibold w-fit"
               >
                 <Phone className="w-4 h-4" />

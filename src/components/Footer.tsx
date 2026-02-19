@@ -61,7 +61,31 @@ const Footer = () => {
                 <Linkedin className="w-4 h-4" />
               </a>
             </div>
-            <p className="text-primary-foreground/60 text-sm">info@sunenergysrls.com</p>
+            <a href="mailto:riccardo.leandri@yahoo.it" className="text-primary-foreground/60 text-sm hover:text-orange transition-colors">
+              riccardo.leandri@yahoo.it
+            </a>
+            <br />
+            <a href="tel:+393338590639" className="text-primary-foreground/60 text-sm hover:text-orange transition-colors">
+              +39 333 859 0639
+            </a>
+          </div>
+        </div>
+
+        {/* Legal Block */}
+        <div className="border-t border-navy-light/30 pt-6 mb-6">
+          <div className="text-primary-foreground/40 text-xs leading-relaxed space-y-1 text-center">
+            <p className="font-medium text-primary-foreground/50">SUN-ENERGY SOCIETÀ A RESPONSABILITÀ LIMITATA SEMPLIFICATA</p>
+            <p>Sede Legale: Via Cecconi 71 – 67051 Avezzano (AQ)</p>
+            <p>
+              P.IVA: 02136450661 &nbsp;|&nbsp; EORI: IT02136450661
+            </p>
+            <p>
+              Email: <a href="mailto:riccardo.leandri@yahoo.it" className="hover:text-primary-foreground/70 transition-colors">riccardo.leandri@yahoo.it</a>
+              &nbsp;|&nbsp;
+              PEC: <a href="mailto:sun-energysrls@pec.it" className="hover:text-primary-foreground/70 transition-colors">sun-energysrls@pec.it</a>
+              &nbsp;|&nbsp;
+              Tel: <a href="tel:+393338590639" className="hover:text-primary-foreground/70 transition-colors">+39 333 859 0639</a>
+            </p>
           </div>
         </div>
 
