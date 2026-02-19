@@ -15,10 +15,11 @@ const HeroSection = () => {
           src={heroBg}
           alt="Fotovoltaico e illuminazione industriale"
           className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-110 saturate-105"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
-        {/* Minimal blur for readability */}
-        <div className="absolute inset-0 backdrop-blur-[0.5px]" />
-        {/* Navy overlay 55% */}
+        {/* Navy overlay */}
         <div className="absolute inset-0 bg-[rgba(5,18,40,0.55)]" />
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(5,18,40,0.15)] via-transparent to-[rgba(5,18,40,0.35)]" />
       </div>
@@ -79,19 +80,19 @@ const HeroSection = () => {
             className="flex flex-wrap justify-center gap-4"
           >
             <button
-              onClick={() => scrollTo("#contact")}
-              className="flex items-center gap-2 bg-orange text-orange-foreground px-8 py-4 rounded-lg font-semibold hover:brightness-110 transition-all text-sm md:text-base shadow-lg shadow-orange/25"
+              onClick={() => scrollTo("#contatti")}
+              className="flex items-center gap-2 bg-orange text-orange-foreground px-8 py-4 rounded-lg font-semibold hover:brightness-110 transition-all text-sm md:text-base shadow-lg shadow-orange/25 cursor-pointer"
             >
               Richiedi Preventivo
               <ArrowRight className="w-4 h-4" />
             </button>
-            <button
-              onClick={() => scrollTo("#contact")}
-              className="flex items-center gap-2 border-2 border-orange text-orange px-8 py-4 rounded-lg font-semibold hover:bg-orange hover:text-orange-foreground transition-all text-sm md:text-base"
+            <a
+              href="tel:+393338590639"
+              className="flex items-center gap-2 border-2 border-orange text-orange px-8 py-4 rounded-lg font-semibold hover:bg-orange hover:text-orange-foreground transition-all text-sm md:text-base cursor-pointer"
             >
               <Phone className="w-4 h-4" />
               Contatta il nostro Ufficio Commerciale
-            </button>
+            </a>
           </motion.div>
         </motion.div>
 
