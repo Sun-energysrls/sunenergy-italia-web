@@ -7,6 +7,9 @@ import trinaSolarLogo from "@/assets/brands/trina-solar.png";
 import sunevoLogo from "@/assets/brands/sunevo.png";
 import sunpowerLogo from "@/assets/brands/sunpower.png";
 import jingsunLogo from "@/assets/brands/jingsun.png";
+import philipsLogo from "@/assets/brands/philips.png";
+import samsungLogo from "@/assets/brands/samsung.png";
+import osramLogo from "@/assets/brands/osram.png";
 
 const pvBrands = [
   { name: "JA Solar", logo: jaSolarLogo },
@@ -18,7 +21,11 @@ const pvBrands = [
   { name: "Jingsun", logo: jingsunLogo },
 ];
 
-const ledBrands = ["PHILIPS", "OSRAM", "SAMSUNG", "MEAN WELL", "CREE", "Osram", "Ledvance", "Signify"];
+const ledBrands = [
+  { name: "Philips", logo: philipsLogo },
+  { name: "Samsung", logo: samsungLogo },
+  { name: "Osram", logo: osramLogo },
+];
 
 const PvBrandSlider = ({ brands }: { brands: typeof pvBrands }) => {
   const doubled = [...brands, ...brands];
@@ -48,26 +55,23 @@ const PvBrandSlider = ({ brands }: { brands: typeof pvBrands }) => {
   );
 };
 
-const BrandSlider = ({ brands, direction = "left" }: { brands: string[]; direction?: "left" | "right" }) => {
-  const doubled = [...brands, ...brands];
-
+const LedBrandGrid = ({ brands }: { brands: typeof ledBrands }) => {
   return (
-    <div className="overflow-hidden group">
-      <div
-        className={`flex gap-8 ${direction === "left" ? "animate-scroll-left" : "animate-scroll-right"} group-hover:[animation-play-state:paused]`}
-        style={{ width: "max-content" }}
-      >
-        {doubled.map((name, i) => (
-          <div
-            key={`${name}-${i}`}
-            className="bg-card border border-border rounded-xl px-8 py-4 flex items-center justify-center flex-shrink-0"
-          >
-            <span className="font-display font-bold text-muted-foreground text-base tracking-wide whitespace-nowrap">
-              {name}
-            </span>
-          </div>
-        ))}
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center max-w-4xl mx-auto">
+      {brands.map((brand) => (
+        <div
+          key={brand.name}
+          className="w-[280px] md:w-[300px] bg-card border border-border shadow-md flex items-center justify-center transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-xl"
+          style={{ borderRadius: "20px", padding: "32px 36px", height: "160px" }}
+        >
+          <img
+            src={brand.logo}
+            alt={brand.name}
+            className="w-auto object-contain max-w-[70%]"
+            style={{ height: "80px" }}
+          />
+        </div>
+      ))}
     </div>
   );
 };
@@ -118,12 +122,12 @@ const HomeBrands = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-4"
+          className="mt-16"
         >
-          <h3 className="font-display font-semibold text-foreground text-sm uppercase tracking-wider mb-6 text-center">
+          <h3 className="font-display font-semibold text-foreground text-sm uppercase tracking-wider mb-8 text-center">
             Illuminazione
           </h3>
-          <BrandSlider brands={ledBrands} direction="right" />
+          <LedBrandGrid brands={ledBrands} />
         </motion.div>
       </div>
     </section>
