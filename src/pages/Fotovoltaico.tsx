@@ -1,20 +1,22 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import PartnersSection from "@/components/PartnersSection";
+import FvHeroSection from "@/components/fotovoltaico/FvHeroSection";
+import FvModuliSection from "@/components/fotovoltaico/FvModuliSection";
+import FvTransizione from "@/components/fotovoltaico/FvTransizione";
+import FvInverterSection from "@/components/fotovoltaico/FvInverterSection";
+import FvImportazioneSection from "@/components/fotovoltaico/FvImportazioneSection";
+import FvCtaSection from "@/components/fotovoltaico/FvCtaSection";
 
 const Fotovoltaico = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <div className="pt-24">
-        <AboutSection />
-        <ServicesSection />
-        <ProjectsSection />
-        <PartnersSection />
-      </div>
+      <FvHeroSection />
+      <FvModuliSection />
+      <FvTransizione />
+      <FvInverterSection />
+      <FvImportazioneSection />
+      <FvCtaSection />
       <Footer />
     </div>
   );
