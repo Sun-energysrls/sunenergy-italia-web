@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HomeCTA = () => {
   return (
-    <section className="section-padding bg-background">
+    <section id="contatti" className="section-padding bg-background">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
