@@ -10,7 +10,7 @@ const placeholders = [
 
 const FvInverterSection = () => {
   return (
-    <section className="section-padding bg-background">
+    <section className="py-24 px-4 md:px-8 lg:px-16 bg-background">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -27,6 +27,9 @@ const FvInverterSection = () => {
           </h2>
           <p className="text-muted-foreground text-base md:text-lg mt-4 max-w-2xl mx-auto">
             Soluzioni certificate per impianti residenziali e industriali.
+          </p>
+          <p className="text-muted-foreground text-xs mt-2">
+            Sistemi pronti per future integrazioni di brand e prodotti.
           </p>
         </motion.div>
 

@@ -20,7 +20,7 @@ const brands = [
 
 const FvModuliSection = () => {
   return (
-    <section className="section-padding bg-background">
+    <section className="py-24 px-4 md:px-8 lg:px-16 bg-background">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -35,7 +35,11 @@ const FvModuliSection = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
             Moduli Fotovoltaici
           </h2>
-          <p className="text-muted-foreground text-base md:text-lg mt-4 max-w-2xl mx-auto">
+          <div className="w-16 h-[2px] bg-orange mx-auto mt-4 rounded-full" />
+          <p className="text-muted-foreground text-sm md:text-base mt-4 max-w-2xl mx-auto">
+            I principali produttori di moduli selezionati per performance e affidabilità.
+          </p>
+          <p className="text-muted-foreground text-base md:text-lg mt-2 max-w-2xl mx-auto">
             Brand internazionali selezionati per affidabilità e performance.
           </p>
         </motion.div>
