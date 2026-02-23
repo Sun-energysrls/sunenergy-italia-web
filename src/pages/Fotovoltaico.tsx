@@ -5,6 +5,7 @@ import FvModuliSection from "@/components/fotovoltaico/FvModuliSection";
 import FvTransizione from "@/components/fotovoltaico/FvTransizione";
 import FvInverterSection from "@/components/fotovoltaico/FvInverterSection";
 import FvImportazioneSection from "@/components/fotovoltaico/FvImportazioneSection";
+import FvTransizione5Section from "@/components/fotovoltaico/FvTransizione5Section";
 import FvCtaSection from "@/components/fotovoltaico/FvCtaSection";
 
 const Fotovoltaico = () => {
@@ -16,6 +17,7 @@ const Fotovoltaico = () => {
       <FvTransizione />
       <FvInverterSection />
       <FvImportazioneSection />
+      <FvTransizione5Section />
       <FvCtaSection />
       <Footer />
     </div>
