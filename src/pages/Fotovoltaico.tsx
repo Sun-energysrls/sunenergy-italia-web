@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FvHeroSection from "@/components/fotovoltaico/FvHeroSection";
 import FvModuliSection from "@/components/fotovoltaico/FvModuliSection";
-import FvTransizione from "@/components/fotovoltaico/FvTransizione";
+
 import FvInverterSection from "@/components/fotovoltaico/FvInverterSection";
 import FvImportazioneSection from "@/components/fotovoltaico/FvImportazioneSection";
 import FvTransizione5Section from "@/components/fotovoltaico/FvTransizione5Section";
@@ -14,7 +14,7 @@ const Fotovoltaico = () => {
       <Navbar />
       <FvHeroSection />
       <FvModuliSection />
-      <FvTransizione />
+      
       <FvInverterSection />
       <FvImportazioneSection />
       <FvTransizione5Section />

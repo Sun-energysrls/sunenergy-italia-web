@@ -105,15 +105,6 @@ const HomeBrands = () => {
             Fotovoltaico
           </h3>
           <PvBrandSlider brands={pvBrands} />
-          <div className="mt-12 text-center">
-            <div className="w-20 h-[3px] bg-orange/50 mx-auto mb-5 rounded-full" />
-            <p className="text-base md:text-lg font-bold text-foreground">
-              Moduli Europei per la <span className="text-orange">Transizione 5.0</span>
-            </p>
-            <p className="text-xs md:text-sm text-muted-foreground mt-2">
-              (Bisol, Aiko e altri produttori certificati UE)
-            </p>
-          </div>
         </motion.div>
 
         {/* LED */}
