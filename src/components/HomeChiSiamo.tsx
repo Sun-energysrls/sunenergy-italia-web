@@ -3,7 +3,7 @@ import { Zap, Handshake, MapPin } from "lucide-react";
 import chiSiamoImg from "@/assets/chi-siamo-corporate.jpg";
 
 const highlights = [
-  { text: "Oltre 25 MW forniti in Italia", icon: Zap },
+  { text: "Oltre 30 MW forniti in Italia", icon: Zap },
   { text: "Collaborazioni con primari gruppi retail e GDO", icon: Handshake },
   { text: "Operatività nazionale", icon: MapPin },
 ];

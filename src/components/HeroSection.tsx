@@ -134,7 +134,7 @@ const HeroSection = () => {
               <p className="font-bold text-white text-sm">Fotovoltaico Utility-Scale</p>
             </div>
             <p className="text-white/60 text-xs leading-relaxed ml-7 mt-1">
-              Oltre 25 MW installati in tutta Italia.
+              Oltre 30 MW installati in tutta Italia.
             </p>
 
             {/* Divider */}

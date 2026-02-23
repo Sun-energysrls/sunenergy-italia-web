@@ -23,10 +23,10 @@ const HomeForniture = () => {
               </h3>
             </div>
             <p className="font-display text-5xl md:text-6xl font-bold text-orange mb-4">
-              25 <span className="text-3xl md:text-4xl">MW</span>
+              30 <span className="text-3xl md:text-4xl">MW</span>
             </p>
             <p className="text-muted-foreground text-base leading-relaxed">
-              Oltre 25 MW installati tra impianti domestici e professionali su tutto il territorio nazionale.
+              Oltre 30 MW installati tra impianti domestici e professionali su tutto il territorio nazionale.
             </p>
           </motion.div>
 
