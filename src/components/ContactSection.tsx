@@ -87,8 +87,8 @@ const ContactSection = () => {
                   placeholder="Il tuo nome" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground mb-1.5">Azienda</label>
-                <input type="text" value={form.company} onChange={update("company")} maxLength={100}
+                <label className="block text-sm font-medium text-foreground mb-1.5">Azienda *</label>
+                <input required type="text" value={form.company} onChange={update("company")} maxLength={100}
                   className="w-full px-4 py-3 bg-muted border border-border rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-colors"
                   placeholder="Nome azienda" />
               </div>

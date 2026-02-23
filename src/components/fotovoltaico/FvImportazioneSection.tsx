@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Ship, FileCheck, Calculator, Truck } from "lucide-react";
+import { Ship, FileCheck, Truck } from "lucide-react";
 
 const features = [
   {
@@ -15,16 +15,10 @@ const features = [
       "Documentazione, sdoganamento e conformità normativa gestiti internamente.",
   },
   {
-    icon: Calculator,
-    title: "Preventivi DDP",
-    description:
-      "Quotazioni inclusive di dazi, trasporto e assicurazione — nessun costo nascosto.",
-  },
-  {
     icon: Truck,
-    title: "Consegna diretta in cantiere",
+    title: "Preventivo DDP e Logistica fino al Cantiere",
     description:
-      "Logistica strutturata con consegna programmata direttamente sul sito di installazione.",
+      "Dalla quotazione all'arrivo in cantiere: gestione completa di dazi, trasporto internazionale, pratiche doganali e consegna programmata direttamente sul sito di installazione.",
   },
 ];
 
@@ -51,7 +45,7 @@ const FvImportazioneSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feat, i) => (
             <motion.div
               key={feat.title}
