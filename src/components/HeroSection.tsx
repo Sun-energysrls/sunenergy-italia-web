@@ -108,10 +108,10 @@ const HeroSection = () => {
               <div className="w-10 h-10 bg-orange/20 rounded-lg flex items-center justify-center transition-transform duration-300 ease-out group-hover:scale-105">
                 <Ship className="w-5 h-5 text-orange" />
               </div>
-              <h3 className="font-display font-bold text-white text-lg">Importazione Diretta DDP</h3>
+              <h3 className="font-display font-bold text-white text-lg">Preventivo DDP e Logistica fino al Cantiere</h3>
             </div>
             <p className="text-white/65 text-sm leading-relaxed">
-              Importazione diretta dalla Cina con gestione completa dogana, logistica e consegna DDP in cantiere. Prezzi competitivi e preventivi personalizzati.
+              Dalla quotazione all'arrivo in cantiere: gestione completa di dazi, pratiche doganali, trasporto internazionale e consegna programmata direttamente sul sito di installazione, senza costi nascosti.
             </p>
           </motion.div>
 
