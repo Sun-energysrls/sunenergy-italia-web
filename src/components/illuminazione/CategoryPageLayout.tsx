@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 
 interface SubcategoryItem {
   name: string;
+  link?: string;
 }
 
 interface SubcategoryGroup {
@@ -93,21 +94,35 @@ const CategoryPageLayout = ({
           {/* Simple list layout */}
           {subcategories && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 max-w-4xl mx-auto">
-              {subcategories.map((item, i) => (
-                <motion.div
-                  key={item.name}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.04 }}
-                  className="flex items-center gap-4 py-4 px-5 rounded-xl border border-transparent hover:border-border hover:bg-muted/50 transition-all group cursor-default"
-                >
-                  <ChevronRight className="w-4 h-4 text-orange shrink-0" />
-                  <span className="text-foreground font-medium text-base group-hover:text-secondary transition-colors">
-                    {item.name}
-                  </span>
-                </motion.div>
-              ))}
+              {subcategories.map((item, i) => {
+                const content = (
+                  <>
+                    <ChevronRight className="w-4 h-4 text-orange shrink-0" />
+                    <span className="text-foreground font-medium text-base group-hover:text-secondary transition-colors">
+                      {item.name}
+                    </span>
+                  </>
+                );
+                const cls = "flex items-center gap-4 py-4 px-5 rounded-xl border border-transparent hover:border-border hover:bg-muted/50 transition-all group cursor-default";
+
+                return (
+                  <motion.div
+                    key={item.name}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.04 }}
+                  >
+                    {item.link ? (
+                      <Link to={item.link} className={`${cls} cursor-pointer`}>
+                        {content}
+                      </Link>
+                    ) : (
+                      <div className={cls}>{content}</div>
+                    )}
+                  </motion.div>
+                );
+              })}
             </div>
           )}
 
