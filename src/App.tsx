@@ -14,6 +14,8 @@ import MaterialeElettrico from "./pages/illuminazione/MaterialeElettrico";
 import Contatti from "./pages/Contatti";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import DownlightLed from "./pages/illuminazione/interni/DownlightLed";
+import StrisceLed from "./pages/illuminazione/interni/StrisceLed";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,8 @@ const App = () => (
           <Route path="/illuminazione/professionale" element={<Professionale />} />
           <Route path="/illuminazione/decorative" element={<Decorative />} />
           <Route path="/illuminazione/materiale-elettrico" element={<MaterialeElettrico />} />
+          <Route path="/illuminazione/interni/downlight-led" element={<DownlightLed />} />
+          <Route path="/illuminazione/interni/strisce-led" element={<StrisceLed />} />
           <Route path="/contatti" element={<Contatti />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
