@@ -2,15 +2,15 @@ import CategoryPageLayout from "@/components/illuminazione/CategoryPageLayout";
 import heroImg from "@/assets/illuminazione/cat-professionale.jpg";
 
 const subcategories = [
-  { name: "Illuminazione LED Industriale" },
-  { name: "Proiettori LED per Esterni" },
-  { name: "Illuminazione LED per Negozi" },
-  { name: "Pannelli LED" },
-  { name: "Illuminazione LED Stradale" },
-  { name: "Illuminazione Sportiva" },
-  { name: "Luci di Emergenza LED" },
-  { name: "Illuminazione per Eventi" },
-  { name: "Energia Solare" },
+  { name: "Illuminazione LED Industriale", link: "/illuminazione/professionale/illuminazione-industriale" },
+  { name: "Proiettori LED per Esterni", link: "/illuminazione/professionale/proiettori-led" },
+  { name: "Illuminazione LED per Negozi", link: "/illuminazione/professionale/illuminazione-negozi" },
+  { name: "Pannelli LED", link: "/illuminazione/professionale/pannelli-led" },
+  { name: "Illuminazione LED Stradale", link: "/illuminazione/professionale/illuminazione-stradale" },
+  { name: "Illuminazione Sportiva", link: "/illuminazione/professionale/illuminazione-sportiva" },
+  { name: "Luci di Emergenza LED", link: "/illuminazione/professionale/luci-emergenza" },
+  { name: "Illuminazione per Eventi", link: "/illuminazione/professionale/illuminazione-eventi" },
+  { name: "Energia Solare", link: "/illuminazione/professionale/energia-solare" },
 ];
 
 const Professionale = () => (
