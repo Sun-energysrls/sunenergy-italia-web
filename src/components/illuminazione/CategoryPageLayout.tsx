@@ -9,9 +9,14 @@ interface SubcategoryItem {
   link?: string;
 }
 
+interface SubcategoryGroupItem {
+  name: string;
+  link?: string;
+}
+
 interface SubcategoryGroup {
   groupTitle: string;
-  items: string[];
+  items: SubcategoryGroupItem[];
 }
 
 interface CategoryPageLayoutProps {
@@ -145,17 +150,27 @@ const CategoryPageLayout = ({
                     </h3>
                   </div>
                   <div className="space-y-3">
-                    {group.items.map((item, ii) => (
-                      <div
-                        key={item}
-                        className="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-muted/50 transition-all group cursor-default"
-                      >
-                        <ChevronRight className="w-3.5 h-3.5 text-orange shrink-0" />
-                        <span className="text-muted-foreground text-sm group-hover:text-foreground transition-colors">
-                          {item}
-                        </span>
-                      </div>
-                    ))}
+                    {group.items.map((item, ii) => {
+                      const itemObj = typeof item === "string" ? { name: item } : item;
+                      const innerContent = (
+                        <>
+                          <ChevronRight className="w-3.5 h-3.5 text-orange shrink-0" />
+                          <span className="text-muted-foreground text-sm group-hover:text-foreground transition-colors">
+                            {itemObj.name}
+                          </span>
+                        </>
+                      );
+                      const itemCls = "flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-muted/50 transition-all group cursor-default";
+                      return itemObj.link ? (
+                        <Link key={itemObj.name} to={itemObj.link} className={`${itemCls} cursor-pointer`}>
+                          {innerContent}
+                        </Link>
+                      ) : (
+                        <div key={itemObj.name} className={itemCls}>
+                          {innerContent}
+                        </div>
+                      );
+                    })}
                   </div>
                 </motion.div>
               ))}
