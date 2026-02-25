@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Home, Sun, Factory, Sparkles, Cable, ArrowRight } from "lucide-react";
+import { Home, Sun, Factory, Cable, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const categories = [
@@ -20,12 +20,6 @@ const categories = [
     title: "Illuminazione Professionale",
     desc: "Impianti LED per industria, sport e retail.",
     href: "/illuminazione/professionale",
-  },
-  {
-    icon: Sparkles,
-    title: "Luci Decorative",
-    desc: "Soluzioni estetiche per ambienti domestici e hospitality.",
-    href: "/illuminazione/decorative",
   },
   {
     icon: Cable,
@@ -54,7 +48,7 @@ const IlCategorieSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.title}

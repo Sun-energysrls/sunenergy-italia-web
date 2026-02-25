@@ -10,9 +10,6 @@ const subcategories = [
   { name: "Illuminazione LED Stradale", link: "/illuminazione/esterni/illuminazione-stradale" },
   { name: "Faretti LED per Piscine", link: "/illuminazione/esterni/faretti-piscine" },
   { name: "Lampade per Esterni", link: "/illuminazione/esterni/lampade" },
-  { name: "Ghirlande Luminose LED Decorative", link: "/illuminazione/esterni/ghirlande-luminose" },
-  { name: "Mobili LED per Esterni", link: "/illuminazione/esterni/mobili-led" },
-  { name: "Illuminazione LED Solare", link: "/illuminazione/esterni/illuminazione-solare" },
 ];
 
 const Esterni = () => (
