@@ -144,13 +144,13 @@ const SubcategoryPageLayout = ({
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="rounded-2xl overflow-hidden border border-border bg-muted aspect-[4/3] flex items-center justify-center"
+              className="rounded-2xl overflow-hidden border border-border bg-muted flex items-center justify-center"
             >
               {image ? (
                 <img
                   src={image}
                   alt={title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-contain rounded-2xl"
                   loading="lazy"
                 />
               ) : (
