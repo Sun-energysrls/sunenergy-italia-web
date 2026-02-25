@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import heroImg from "@/assets/illuminazione/hero-materiale-elettrico.png";
-import slide1 from "@/assets/illuminazione/hero-materiale-elettrico.png";
+import slide1 from "@/assets/illuminazione/interruttore-elettrico.png";
 import slide2 from "@/assets/illuminazione/materiale-elettrico-2.png";
 import slide3 from "@/assets/illuminazione/materiale-elettrico-3.png";
 import slide4 from "@/assets/illuminazione/materiale-elettrico-4.png";
