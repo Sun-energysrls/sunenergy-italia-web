@@ -1,4 +1,5 @@
 import SubcategoryPageLayout from "@/components/illuminazione/SubcategoryPageLayout";
+import img from "@/assets/illuminazione/segnapasso-led-per-esterni.png";
 
 const SegnapassoLedEsterni = () => (
   <SubcategoryPageLayout
@@ -6,6 +7,7 @@ const SegnapassoLedEsterni = () => (
     subtitle="Illuminazione di sicurezza e percorso per aree esterne e giardini."
     description="I Segnapasso LED per Esterni offrono illuminazione di cortesia e sicurezza per vialetti, scale esterne, terrazze e percorsi pedonali. Con protezione IP65 e superiore, resistono a pioggia, polvere e sbalzi termici. Disponibili in versioni da incasso a parete e a pavimento, con corpo in acciaio inox o alluminio, garantiscono durabilità e bassa manutenzione. Soluzione professionale per landscaping, hospitality e progetti residenziali di pregio."
     categoryName="Segnapasso LED per Esterni"
+    image={img}
   />
 );
 
