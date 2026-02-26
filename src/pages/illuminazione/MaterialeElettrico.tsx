@@ -15,6 +15,18 @@ import slide3 from "@/assets/illuminazione/materiale-elettrico-3.png";
 import slide4 from "@/assets/illuminazione/materiale-elettrico-4.png";
 import slide5 from "@/assets/illuminazione/materiale-elettrico-5.png";
 
+import maxgeLogo from "@/assets/brands/maxge.png";
+import siemensLogo from "@/assets/brands/siemens.png";
+import threemLogo from "@/assets/brands/3m.png";
+import bticinoLogo from "@/assets/brands/bticino.png";
+
+const meBrands = [
+  { name: "Maxge", logo: maxgeLogo },
+  { name: "Siemens", logo: siemensLogo },
+  { name: "3M", logo: threemLogo },
+  { name: "BTicino", logo: bticinoLogo },
+];
+
 const slides = [slide1, slide2, slide3, slide4, slide5];
 
 const ambiti = [
@@ -103,6 +115,40 @@ const Materiale = () => {
           transition={{ duration: 1.2, delay: 0.8 }}
           className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange via-orange/50 to-transparent origin-left z-10"
         />
+      </section>
+
+      {/* Brand Section */}
+      <section className="section-padding bg-muted overflow-hidden">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-14"
+          >
+            <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Partner</span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
+              I Nostri Brand
+            </h2>
+          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center max-w-5xl mx-auto">
+            {meBrands.map((brand) => (
+              <div
+                key={brand.name}
+                className="w-[280px] md:w-[240px] lg:w-[260px] bg-card border border-border shadow-md flex items-center justify-center transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-xl"
+                style={{ borderRadius: "20px", padding: "32px 36px", height: "160px" }}
+              >
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  className="w-auto object-contain max-w-[70%]"
+                  style={{ height: "80px" }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Slider – Floating PNG Products */}
