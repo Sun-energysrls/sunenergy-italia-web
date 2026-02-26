@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import PrivacyCheckbox from "@/components/PrivacyCheckbox";
 import heroImg from "@/assets/illuminazione/hero-professionale.png";
 import slide1 from "@/assets/illuminazione/illuminazione-professionale-7.png";
 import slide2 from "@/assets/illuminazione/illuminazione-professionale-2.png";
@@ -36,6 +37,8 @@ const Professionale = () => {
     name: "", company: "", email: "", phone: "", ambito: "", message: defaultMessage, honeypot: "",
   });
   const [loading, setLoading] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [privacyError, setPrivacyError] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const scroll = (dir: "left" | "right") => {
@@ -47,6 +50,10 @@ const Professionale = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (form.honeypot) return;
+    if (!privacyAccepted) {
+      setPrivacyError(true);
+      return;
+    }
     setLoading(true);
     try {
       const { error } = await supabase.functions.invoke("send-contact-email", {
@@ -62,6 +69,8 @@ const Professionale = () => {
       if (error) throw error;
       toast({ title: "Messaggio inviato!", description: "Il nostro ufficio commerciale ti ricontatterà entro 24 ore." });
       setForm({ name: "", company: "", email: "", phone: "", ambito: "", message: defaultMessage, honeypot: "" });
+      setPrivacyAccepted(false);
+      setPrivacyError(false);
     } catch {
       toast({ title: "Errore", description: "Si è verificato un errore. Riprova più tardi.", variant: "destructive" });
     } finally {
@@ -226,7 +235,12 @@ const Professionale = () => {
               <label className="block text-sm font-medium text-foreground mb-1.5">Messaggio</label>
               <textarea value={form.message} onChange={update("message")} maxLength={1000} rows={4} className={`${inputCls} resize-none`} />
             </div>
-            <button type="submit" disabled={loading} className="flex items-center gap-2 bg-orange text-orange-foreground px-8 py-3.5 rounded-lg font-semibold hover:brightness-110 transition-colors text-sm disabled:opacity-50">
+            <PrivacyCheckbox
+              accepted={privacyAccepted}
+              onChange={(v) => { setPrivacyAccepted(v); if (v) setPrivacyError(false); }}
+              showError={privacyError}
+            />
+            <button type="submit" disabled={loading || !privacyAccepted} className="flex items-center gap-2 bg-orange text-orange-foreground px-8 py-3.5 rounded-lg font-semibold hover:brightness-110 transition-colors text-sm disabled:opacity-50">
               <Send className="w-4 h-4" />
               {loading ? "Invio in corso..." : "Invia Richiesta"}
             </button>

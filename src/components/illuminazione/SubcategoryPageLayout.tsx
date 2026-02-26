@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Send, ImageOff } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import PrivacyCheckbox from "@/components/PrivacyCheckbox";
 
 interface SubcategoryPageLayoutProps {
   title: string;
@@ -33,10 +34,16 @@ const SubcategoryPageLayout = ({
     honeypot: "",
   });
   const [loading, setLoading] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [privacyError, setPrivacyError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (form.honeypot) return;
+    if (!privacyAccepted) {
+      setPrivacyError(true);
+      return;
+    }
 
     setLoading(true);
     try {
@@ -65,6 +72,8 @@ const SubcategoryPageLayout = ({
         message: defaultMessage,
         honeypot: "",
       });
+      setPrivacyAccepted(false);
+      setPrivacyError(false);
     } catch {
       toast({
         title: "Errore",
@@ -279,9 +288,15 @@ const SubcategoryPageLayout = ({
               />
             </div>
 
+            <PrivacyCheckbox
+              accepted={privacyAccepted}
+              onChange={(v) => { setPrivacyAccepted(v); if (v) setPrivacyError(false); }}
+              showError={privacyError}
+            />
+
             <button
               type="submit"
-              disabled={loading}
+              disabled={loading || !privacyAccepted}
               className="flex items-center gap-2 bg-orange text-orange-foreground px-8 py-3.5 rounded-lg font-semibold hover:brightness-110 transition-colors text-sm disabled:opacity-50"
             >
               <Send className="w-4 h-4" />
