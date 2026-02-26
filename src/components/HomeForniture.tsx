@@ -46,21 +46,14 @@ const HomeForniture = () => {
                 Illuminazione Professionale
               </h3>
             </div>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {["KLEPIERRE", "CBRE", "EUROSPIN", "CONAD"].map((brand) => (
-                <span
-                  key={brand}
-                  className="text-xs font-semibold tracking-wider bg-orange/10 text-orange px-3 py-1 rounded-full"
-                >
-                  {brand}
-                </span>
-              ))}
-            </div>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              Collaborazioni con primari gruppi retail e GDO come Klepierre, CBRE, Eurospin, Conad.
+            <p className="font-display text-5xl md:text-6xl font-bold text-orange mb-4">
+              20.000<span className="text-3xl md:text-4xl">+</span>
             </p>
-            <p className="text-muted-foreground/70 text-sm mt-3 leading-relaxed">
-              Più di 20.000 articoli disponibili tra soluzioni indoor, outdoor e industriali.
+            <p className="font-display text-lg md:text-xl font-bold text-foreground/80 -mt-2 mb-4 tracking-wider">
+              PRODOTTI
+            </p>
+            <p className="text-muted-foreground text-base leading-relaxed">
+              Un catalogo completo con oltre 20.000 articoli per applicazioni civili, industriali e professionali.
             </p>
           </motion.div>
         </div>
