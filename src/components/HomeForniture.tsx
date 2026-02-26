@@ -12,8 +12,8 @@ const HomeForniture = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-card border border-border rounded-2xl p-8 group hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
-          >
+            className="bg-card border border-border rounded-2xl p-8 group hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-orange/10 rounded-lg flex items-center justify-center">
                 <Sun className="w-5 h-5 text-orange" />
@@ -25,8 +25,8 @@ const HomeForniture = () => {
             <p className="font-display text-5xl md:text-6xl font-bold text-orange mb-4">
               30 <span className="text-3xl md:text-4xl">MW</span>
             </p>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              Oltre 30 MW installati tra impianti domestici e professionali su tutto il territorio nazionale.
+            <p className="text-muted-foreground text-base leading-relaxed">Oltre 30 MW forniti tra impianti domestici e professionali su tutto il territorio nazionale.
+
             </p>
           </motion.div>
 
@@ -36,8 +36,8 @@ const HomeForniture = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="bg-card border border-border rounded-2xl p-8 group hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
-          >
+            className="bg-card border border-border rounded-2xl p-8 group hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-orange/10 rounded-lg flex items-center justify-center">
                 <Lightbulb className="w-5 h-5 text-orange" />
@@ -58,8 +58,8 @@ const HomeForniture = () => {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HomeForniture;
