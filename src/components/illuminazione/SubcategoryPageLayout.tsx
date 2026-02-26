@@ -178,7 +178,7 @@ const SubcategoryPageLayout = ({
               Catalogo
             </span>
             <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mt-2 mb-4">
-              Richiedi il Catalogo Completo Illuminazione 2025
+              Richiedi il Catalogo Completo Illuminazione 2026
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
               Compila il modulo per ricevere il catalogo completo e assistenza
