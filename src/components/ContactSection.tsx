@@ -1,17 +1,24 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Send, Phone, Mail, MapPin, Shield } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import PrivacyCheckbox from "@/components/PrivacyCheckbox";
 
 const ContactSection = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", message: "", honeypot: "" });
   const [loading, setLoading] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [privacyError, setPrivacyError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (form.honeypot) return; // anti-spam
+    if (form.honeypot) return;
+    if (!privacyAccepted) {
+      setPrivacyError(true);
+      return;
+    }
 
     setLoading(true);
     try {
@@ -33,6 +40,8 @@ const ContactSection = () => {
         description: "Grazie per averci contattato. Il nostro ufficio commerciale ti ricontatterà entro 24 ore.",
       });
       setForm({ name: "", company: "", email: "", phone: "", message: "", honeypot: "" });
+      setPrivacyAccepted(false);
+      setPrivacyError(false);
     } catch (err) {
       toast({
         title: "Errore",
@@ -113,7 +122,12 @@ const ContactSection = () => {
                 className="w-full px-4 py-3 bg-muted border border-border rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-colors resize-none"
                 placeholder="Descrivi il tuo progetto..." />
             </div>
-            <button type="submit" disabled={loading}
+            <PrivacyCheckbox
+              accepted={privacyAccepted}
+              onChange={(v) => { setPrivacyAccepted(v); if (v) setPrivacyError(false); }}
+              showError={privacyError}
+            />
+            <button type="submit" disabled={loading || !privacyAccepted}
               className="flex items-center gap-2 bg-orange text-orange-foreground px-8 py-3.5 rounded-lg font-semibold hover:brightness-110 transition-colors text-sm disabled:opacity-50"
             >
               <Send className="w-4 h-4" />
