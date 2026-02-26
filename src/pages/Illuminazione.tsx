@@ -4,6 +4,7 @@ import IlHeroSection from "@/components/illuminazione/IlHeroSection";
 import IlPianteLedSection from "@/components/illuminazione/IlPianteLedSection";
 import IlBrandSection from "@/components/illuminazione/IlBrandSection";
 import IlCategorieSection from "@/components/illuminazione/IlCategorieSection";
+import IlCatalogoSection from "@/components/illuminazione/IlCatalogoSection";
 import IlCollaborazioniSection from "@/components/illuminazione/IlCollaborazioniSection";
 import IlCtaSection from "@/components/illuminazione/IlCtaSection";
 
@@ -15,6 +16,7 @@ const Illuminazione = () => {
       <IlPianteLedSection />
       <IlBrandSection />
       <IlCategorieSection />
+      <IlCatalogoSection />
       <IlCollaborazioniSection />
       <IlCtaSection />
       <Footer />

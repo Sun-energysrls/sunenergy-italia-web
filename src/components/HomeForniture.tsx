@@ -59,6 +59,9 @@ const HomeForniture = () => {
             <p className="text-muted-foreground text-base leading-relaxed">
               Collaborazioni con primari gruppi retail e GDO come Klepierre, CBRE, Eurospin, Conad.
             </p>
+            <p className="text-muted-foreground/70 text-sm mt-3 leading-relaxed">
+              Più di 20.000 articoli disponibili tra soluzioni indoor, outdoor e industriali.
+            </p>
           </motion.div>
         </div>
       </div>

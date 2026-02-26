@@ -68,8 +68,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="text-white/75 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Soluzioni complete per impianti utility-scale, forniture industriali
-            LED e importazioni DDP con consegna diretta in cantiere.
+            Soluzioni complete per impianti utility-scale, oltre 20.000 prodotti
+            per illuminazione professionale e importazioni DDP con consegna diretta in cantiere.
           </motion.p>
 
           {/* CTAs */}
