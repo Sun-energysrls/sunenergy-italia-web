@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, CheckCircle, FileText, Barcode, Award, AlertTriangle } from "lucide-react";
+import etichettaImg from "@/assets/etichetta-importatore.jpg";
 
 const garanzie = [
   { icon: CheckCircle, text: "Etichetta identificativa permanente con ragione sociale, indirizzo e P.IVA su ogni modulo" },
