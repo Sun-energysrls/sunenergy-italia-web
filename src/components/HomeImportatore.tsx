@@ -136,7 +136,7 @@ const HomeImportatore = () => {
             </div>
 
             {/* Riferimenti normativi */}
-            <div className="p-4 bg-gray-50">
+            <div className="p-4 bg-muted">
               <h4 className="font-display text-base font-bold text-foreground mb-4 flex items-center gap-2">
                 <FileText className="w-4 h-4 text-orange" />
                 Riferimenti normativi
