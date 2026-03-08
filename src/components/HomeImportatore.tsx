@@ -61,7 +61,7 @@ const HomeImportatore = () => {
             <span className="text-foreground font-medium">
               (Via Cecconi 71, 67051 Avezzano (AQ), Italy)
             </span>{" "}
-            e numero IVA{" "}
+            e Partita IVA{" "}
             <span className="text-foreground font-medium">IT02136450661</span>.
           </p>
         </motion.div>
