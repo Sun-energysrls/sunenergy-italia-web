@@ -11,12 +11,16 @@ const garanzie = [
 
 const normative = [
   {
-    titolo: "Regolamento UE 2016/425",
-    desc: "Registri degli importatori: obbligo di indicare sul prodotto nome, denominazione commerciale o marchio registrato e indirizzo di contatto, oppure sull'imballaggio o documento di accompagnamento.",
+    titolo: "Decisione n. 768/2008/CE — Allegato I, Articolo R4 (Obblighi degli importatori)",
+    desc: "Gli importatori devono indicare sul prodotto il loro nome, denominazione commerciale o marchio registrato e l'indirizzo. Ciascun prodotto deve riportare un numero di serie o lotto univoco per garantirne la tracciabilità.",
   },
   {
     titolo: "Direttiva 2014/35/UE (Bassa Tensione)",
-    desc: "Art. 8, comma 3 — recepita con D.Lgs. 19 maggio 2016, n. 86, Art. 10, comma 3: fabbricante o importatore devono garantire che il prodotto sia identificabile con nome, marchio e indirizzo.",
+    desc: "Art. 8, comma 3: il fabbricante o l'importatore devono garantire che il prodotto sia identificabile con nome, marchio registrato e indirizzo sul prodotto stesso o sull'imballaggio.",
+  },
+  {
+    titolo: "D.Lgs. 19 maggio 2016, n. 86 — Art. 10, comma 3 (Recepimento italiano)",
+    desc: "Recepisce la Direttiva 2014/35/UE in Italia: il fabbricante o l'importatore devono garantire l'identificabilità del prodotto sul mercato europeo.",
   },
 ];
 
