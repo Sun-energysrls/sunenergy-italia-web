@@ -66,14 +66,14 @@ const HomeImportatore = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Colonna sinistra: testo, garanzie, avvertenza */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="space-y-8"
+            className="space-y-6"
           >
             {/* Garanzie per gli installatori */}
             <div>
@@ -90,8 +90,8 @@ const HomeImportatore = () => {
                     transition={{ duration: 0.4, delay: 0.1 * i }}
                     className="flex items-start gap-4 bg-muted rounded-xl p-5 border border-border"
                   >
-                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center">
-                      <item.icon className="w-5 h-5 text-green-600" />
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+                      <item.icon className="w-5 h-5 text-emerald-600" />
                     </div>
                     <span className="text-foreground font-medium text-sm md:text-base leading-snug">
                       {item.text}
@@ -124,16 +124,14 @@ const HomeImportatore = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="rounded-2xl border border-border overflow-hidden bg-muted"
+            className="rounded-2xl overflow-hidden shadow-lg border border-border"
           >
             {/* Immagine etichetta */}
-            <div className="w-full h-[320px] overflow-hidden">
-              <img
-                src={etichettaImg}
-                alt="Etichetta importatore Sun-Energy apposta sui moduli fotovoltaici con logo, ragione sociale, indirizzo e P.IVA"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <img
+              src={etichettaImg}
+              alt="Etichetta importatore Sun-Energy apposta sui moduli fotovoltaici con logo, ragione sociale, indirizzo e P.IVA"
+              className="w-full h-[320px] object-cover object-center"
+            />
 
             {/* Riferimenti normativi */}
             <div className="p-4 bg-muted">
