@@ -18,6 +18,7 @@ const Index = () => {
       <HomeImportazione />
       <HomeForniture />
       <HomeBrands />
+      <HomeImportatore />
       <HomeTransizione />
       <HomeCTA />
       <Footer />
