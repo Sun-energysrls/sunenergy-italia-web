@@ -66,57 +66,77 @@ const HomeImportatore = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
-          {/* Colonna sinistra: garanzie */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Colonna sinistra: testo, garanzie, avvertenza */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
+            className="space-y-8"
           >
-            <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-6">
-              Garanzie per gli installatori
-            </h3>
-            <div className="space-y-4">
-              {garanzie.map((item, i) => (
-                <motion.div
-                  key={item.text}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.1 * i }}
-                  className="flex items-start gap-4 bg-muted rounded-xl p-5 border border-border"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-green-600" />
-                  </div>
-                  <span className="text-foreground font-medium text-sm md:text-base leading-snug">
-                    {item.text}
-                  </span>
-                </motion.div>
-              ))}
+            {/* Garanzie per gli installatori */}
+            <div>
+              <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-6">
+                Garanzie per gli installatori
+              </h3>
+              <div className="space-y-4">
+                {garanzie.map((item, i) => (
+                  <motion.div
+                    key={item.text}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.1 * i }}
+                    className="flex items-start gap-4 bg-muted rounded-xl p-5 border border-border"
+                  >
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center">
+                      <item.icon className="w-5 h-5 text-green-600" />
+                    </div>
+                    <span className="text-foreground font-medium text-sm md:text-base leading-snug">
+                      {item.text}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Avvertenza */}
+            <div className="bg-orange/5 border border-orange/20 rounded-2xl p-6 flex items-start gap-4">
+              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center">
+                <AlertTriangle className="w-5 h-5 text-orange" />
+              </div>
+              <div>
+                <p className="text-foreground font-semibold text-sm mb-1">
+                  La mancata conformità comporta:
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Blocco della merce in dogana, rigetto da parte del GSE, sanzioni amministrative
+                  e ritiro del prodotto dal mercato.
+                </p>
+              </div>
             </div>
           </motion.div>
 
-          {/* Colonna destra: placeholder immagine + normativa */}
+          {/* Colonna destra: immagine + riferimenti normativi */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
+            className="rounded-2xl border border-border overflow-hidden bg-muted"
           >
-            {/* Placeholder immagine etichetta */}
-            <div className="w-full overflow-hidden rounded-2xl border border-border shadow-md">
+            {/* Immagine etichetta */}
+            <div className="w-full h-[320px] overflow-hidden">
               <img
                 src={etichettaImg}
                 alt="Etichetta importatore Sun-Energy apposta sui moduli fotovoltaici con logo, ragione sociale, indirizzo e P.IVA"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
 
             {/* Riferimenti normativi */}
-            <div className="bg-muted rounded-2xl p-6 border border-border">
+            <div className="p-4 bg-gray-50">
               <h4 className="font-display text-base font-bold text-foreground mb-4 flex items-center gap-2">
                 <FileText className="w-4 h-4 text-orange" />
                 Riferimenti normativi
@@ -132,28 +152,6 @@ const HomeImportatore = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* Avvertenza */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-orange/5 border border-orange/20 rounded-2xl p-6 flex items-start gap-4 max-w-4xl"
-        >
-          <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center">
-            <AlertTriangle className="w-5 h-5 text-orange" />
-          </div>
-          <div>
-            <p className="text-foreground font-semibold text-sm mb-1">
-              La mancata conformità comporta:
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Blocco della merce in dogana, rigetto da parte del GSE, sanzioni amministrative
-              e ritiro del prodotto dal mercato.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
