@@ -13,13 +13,14 @@ const Illuminazione = () => {
   return (
     <>
       <Helmet>
-        <title>Illuminazione LED Professionale | Distribuzione B2B | Sun-Energy</title>
-        <meta name="description" content="Distribuzione B2B di illuminazione LED professionale: oltre 20.000 prodotti Philips, Samsung, Osram per GDO, industria, hospitality e installatori. Catalogo completo per interni, esterni e applicazioni professionali." />
+        <title>Illuminazione LED | Sun-Energy SRLS — Relamping e Progettazione</title>
+        <meta name="description" content="Soluzioni di illuminazione LED per interni ed esterni. Relamping industriale e commerciale. Risparmio energetico garantito. Sun-Energy SRLS Avezzano (AQ)." />
         <link rel="canonical" href="https://sunenergysrls.com/illuminazione" />
-        <meta property="og:title" content="Illuminazione LED Professionale | Distribuzione B2B | Sun-Energy" />
-        <meta property="og:description" content="Distribuzione B2B di illuminazione LED professionale: oltre 20.000 prodotti per GDO, industria e installatori." />
+        <meta property="og:title" content="Illuminazione LED | Sun-Energy SRLS" />
+        <meta property="og:description" content="Soluzioni di illuminazione LED per interni ed esterni. Relamping industriale e commerciale." />
         <meta property="og:url" content="https://sunenergysrls.com/illuminazione" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Sun-Energy SRLS" />
         <meta property="og:image" content="https://sunenergysrls.com/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
