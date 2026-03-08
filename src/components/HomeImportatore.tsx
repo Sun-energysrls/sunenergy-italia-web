@@ -130,7 +130,7 @@ const HomeImportatore = () => {
             <img
               src={etichettaImg}
               alt="Etichetta importatore Sun-Energy apposta sui moduli fotovoltaici con logo, ragione sociale, indirizzo e P.IVA"
-              className="w-full h-[320px] object-cover object-center"
+              className="w-full h-[320px] object-cover object-bottom"
             />
 
             {/* Riferimenti normativi */}
