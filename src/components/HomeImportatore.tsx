@@ -103,10 +103,12 @@ const HomeImportatore = () => {
             className="space-y-6"
           >
             {/* Placeholder immagine etichetta */}
-            <div className="w-full aspect-[4/3] bg-muted rounded-2xl border-2 border-dashed border-border flex items-center justify-center">
-              <p className="text-muted-foreground text-sm md:text-base font-medium text-center px-6">
-                Foto etichetta importatore Sun-Energy
-              </p>
+            <div className="w-full overflow-hidden rounded-2xl border border-border shadow-md">
+              <img
+                src={etichettaImg}
+                alt="Etichetta importatore Sun-Energy apposta sui moduli fotovoltaici con logo, ragione sociale, indirizzo e P.IVA"
+                className="w-full h-auto object-cover"
+              />
             </div>
 
             {/* Riferimenti normativi */}
