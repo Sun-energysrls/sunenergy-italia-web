@@ -4,9 +4,11 @@ import { Send, Phone, Mail, MapPin, Shield } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import PrivacyCheckbox from "@/components/PrivacyCheckbox";
+import { useNavigate } from "react-router-dom";
 
 const ContactSection = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", message: "", honeypot: "" });
   const [loading, setLoading] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
@@ -42,6 +44,7 @@ const ContactSection = () => {
       setForm({ name: "", company: "", email: "", phone: "", message: "", honeypot: "" });
       setPrivacyAccepted(false);
       setPrivacyError(false);
+      navigate("/grazie");
     } catch (err) {
       toast({
         title: "Errore",

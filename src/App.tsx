@@ -16,6 +16,7 @@ const Esterni = lazy(() => import("./pages/illuminazione/Esterni"));
 const Professionale = lazy(() => import("./pages/illuminazione/Professionale"));
 const MaterialeElettrico = lazy(() => import("./pages/illuminazione/MaterialeElettrico"));
 const Contatti = lazy(() => import("./pages/Contatti"));
+const Grazie = lazy(() => import("./pages/Grazie"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const DownlightLed = lazy(() => import("./pages/illuminazione/interni/DownlightLed"));
@@ -83,6 +84,7 @@ const App = () => (
               <Route path="/illuminazione/esterni/lampade" element={<LampadeEsterni />} />
 
               <Route path="/contatti" element={<Contatti />} />
+              <Route path="/grazie" element={<Grazie />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
