@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowLeft } from "lucide-react";
@@ -6,6 +7,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Grazie = () => {
+  useEffect(() => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+          'send_to': 'AW-11053599486/hqT7CL_sraUcEP6V4pYp',
+          'value': 50.0,
+          'currency': 'EUR'
+      });
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
