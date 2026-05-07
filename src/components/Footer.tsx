@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/sunenergy-logo.png";
+import { reportConversion } from "@/utils/analytics";
 
 const Footer = () => {
   return (
@@ -61,11 +62,11 @@ const Footer = () => {
                 <Linkedin className="w-4 h-4" />
               </a>
             </div>
-            <a href="mailto:s.energysrls@gmail.com" className="text-primary-foreground/60 text-sm hover:text-orange transition-colors">
+            <a href="mailto:s.energysrls@gmail.com" onClick={(e) => reportConversion(e, 'AW-11053599486/uOUbCKHDhqkcEP6V4pYp', 'mailto:s.energysrls@gmail.com')} className="text-primary-foreground/60 text-sm hover:text-orange transition-colors">
               s.energysrls@gmail.com
             </a>
             <br />
-            <a href="tel:+393338590639" className="text-primary-foreground/60 text-sm hover:text-orange transition-colors">
+            <a href="tel:+393338590639" onClick={(e) => reportConversion(e, 'AW-11053599486/YyHGCJ7DhqkcEP6V4pYp', 'tel:+393338590639')} className="text-primary-foreground/60 text-sm hover:text-orange transition-colors">
               +39 333 859 0639
             </a>
           </div>
@@ -80,11 +81,11 @@ const Footer = () => {
               P.IVA: 02136450661 &nbsp;|&nbsp; EORI: IT02136450661
             </p>
             <p>
-              Email: <a href="mailto:s.energysrls@gmail.com" className="hover:text-primary-foreground/70 transition-colors">s.energysrls@gmail.com</a>
+              Email: <a href="mailto:s.energysrls@gmail.com" onClick={(e) => reportConversion(e, 'AW-11053599486/uOUbCKHDhqkcEP6V4pYp', 'mailto:s.energysrls@gmail.com')} className="hover:text-primary-foreground/70 transition-colors">s.energysrls@gmail.com</a>
               &nbsp;|&nbsp;
-              PEC: <a href="mailto:sun-energysrls@pec.it" className="hover:text-primary-foreground/70 transition-colors">sun-energysrls@pec.it</a>
+              PEC: <a href="mailto:sun-energysrls@pec.it" onClick={(e) => reportConversion(e, 'AW-11053599486/uOUbCKHDhqkcEP6V4pYp', 'mailto:sun-energysrls@pec.it')} className="hover:text-primary-foreground/70 transition-colors">sun-energysrls@pec.it</a>
               &nbsp;|&nbsp;
-              Tel: <a href="tel:+393338590639" className="hover:text-primary-foreground/70 transition-colors">+39 333 859 0639</a>
+              Tel: <a href="tel:+393338590639" onClick={(e) => reportConversion(e, 'AW-11053599486/YyHGCJ7DhqkcEP6V4pYp', 'tel:+393338590639')} className="hover:text-primary-foreground/70 transition-colors">+39 333 859 0639</a>
             </p>
           </div>
         </div>

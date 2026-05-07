@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { reportConversion } from "@/utils/analytics";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -63,6 +64,7 @@ const Grazie = () => {
               direttamente al numero{" "}
               <a
                 href="tel:+393338590639"
+                onClick={(e) => reportConversion(e, 'AW-11053599486/YyHGCJ7DhqkcEP6V4pYp', 'tel:+393338590639')}
                 className="text-secondary font-medium hover:underline"
               >
                 +39 333 859 0639

@@ -5,6 +5,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import PrivacyCheckbox from "@/components/PrivacyCheckbox";
 import { useNavigate } from "react-router-dom";
+import { reportConversion, reportFormConversion } from "@/utils/analytics";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -44,6 +45,7 @@ const ContactSection = () => {
       setForm({ name: "", company: "", email: "", phone: "", message: "", honeypot: "" });
       setPrivacyAccepted(false);
       setPrivacyError(false);
+      reportFormConversion('AW-11053599486/3fBtCIzX7qgcEP6V4pYp');
       navigate("/grazie");
     } catch (err) {
       toast({
@@ -147,7 +149,7 @@ const ContactSection = () => {
             className="space-y-6"
           >
             <div className="space-y-4">
-              <a href="tel:+393338590639" className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors">
+              <a href="tel:+393338590639" onClick={(e) => reportConversion(e, 'AW-11053599486/YyHGCJ7DhqkcEP6V4pYp', 'tel:+393338590639')} className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors">
                 <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
                   <Phone className="w-5 h-5 text-secondary" />
                 </div>
@@ -156,7 +158,7 @@ const ContactSection = () => {
                   <p className="text-muted-foreground text-sm">+39 333 859 0639</p>
                 </div>
               </a>
-              <a href="mailto:s.energysrls@gmail.com" className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors">
+              <a href="mailto:s.energysrls@gmail.com" onClick={(e) => reportConversion(e, 'AW-11053599486/uOUbCKHDhqkcEP6V4pYp', 'mailto:s.energysrls@gmail.com')} className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors">
                 <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
                   <Mail className="w-5 h-5 text-secondary" />
                 </div>
@@ -165,7 +167,7 @@ const ContactSection = () => {
                   <p className="text-muted-foreground text-sm">s.energysrls@gmail.com</p>
                 </div>
               </a>
-              <a href="mailto:sun-energysrls@pec.it" className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors">
+              <a href="mailto:sun-energysrls@pec.it" onClick={(e) => reportConversion(e, 'AW-11053599486/uOUbCKHDhqkcEP6V4pYp', 'mailto:sun-energysrls@pec.it')} className="flex items-center gap-3 text-foreground hover:text-secondary transition-colors">
                 <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
                   <Shield className="w-5 h-5 text-secondary" />
                 </div>

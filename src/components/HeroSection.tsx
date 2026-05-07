@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Ship, Handshake, Sun, Lightbulb } from "lucide-react";
+import { reportConversion } from "@/utils/analytics";
 import heroBg from "@/assets/hero-combined.png";
 
 const HeroSection = () => {
@@ -88,6 +89,7 @@ const HeroSection = () => {
             </button>
             <a
               href="tel:+393338590639"
+              onClick={(e) => reportConversion(e, 'AW-11053599486/YyHGCJ7DhqkcEP6V4pYp', 'tel:+393338590639')}
               className="flex items-center gap-2 border-2 border-orange text-orange px-8 py-4 rounded-lg font-semibold hover:bg-orange hover:text-orange-foreground transition-all text-sm md:text-base cursor-pointer">
               
               <Phone className="w-4 h-4" />

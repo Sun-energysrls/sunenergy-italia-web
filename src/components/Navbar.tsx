@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { reportConversion } from "@/utils/analytics";
 import logo from "@/assets/sunenergy-logo.png";
 
 const navItems = [
@@ -52,6 +53,7 @@ const Navbar = () => {
           ))}
           <a
             href="tel:+393338590639"
+            onClick={(e) => reportConversion(e, 'AW-11053599486/YyHGCJ7DhqkcEP6V4pYp', 'tel:+393338590639')}
             className="flex items-center gap-2 bg-orange text-orange-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:brightness-110 transition-colors"
           >
             <Phone className="w-4 h-4" />
@@ -94,6 +96,7 @@ const Navbar = () => {
               ))}
               <a
                 href="tel:+393338590639"
+                onClick={(e) => reportConversion(e, 'AW-11053599486/YyHGCJ7DhqkcEP6V4pYp', 'tel:+393338590639')}
                 className="flex items-center gap-2 bg-orange text-orange-foreground px-5 py-2.5 rounded-lg text-sm font-semibold w-fit"
               >
                 <Phone className="w-4 h-4" />

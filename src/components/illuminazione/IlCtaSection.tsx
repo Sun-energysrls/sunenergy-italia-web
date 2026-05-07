@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { reportConversion } from "@/utils/analytics";
 
 const IlCtaSection = () => {
   return (
@@ -29,6 +30,7 @@ const IlCtaSection = () => {
             </Link>
             <a
               href="tel:+393338590639"
+              onClick={(e) => reportConversion(e, 'AW-11053599486/YyHGCJ7DhqkcEP6V4pYp', 'tel:+393338590639')}
               className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary-foreground/10 transition-all text-sm md:text-base"
             >
               <Phone className="w-4 h-4" />
