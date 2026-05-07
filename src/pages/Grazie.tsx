@@ -10,9 +10,16 @@ import Footer from "@/components/Footer";
 const Grazie = () => {
   useEffect(() => {
     if (typeof window !== "undefined" && (window as any).gtag) {
+      // Conversione pagina Grazie (esistente)
       (window as any).gtag('event', 'conversion', {
           'send_to': 'AW-11053599486/hqT7CL_sraUcEP6V4pYp',
           'value': 50.0,
+          'currency': 'EUR'
+      });
+      // Conversione invio form contatti
+      (window as any).gtag('event', 'conversion', {
+          'send_to': 'AW-11053599486/3fBtCIzX7qgcEP6V4pYp',
+          'value': 1.0,
           'currency': 'EUR'
       });
     }
