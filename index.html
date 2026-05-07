@@ -1,15 +1,62 @@
 <!doctype html>
 <html lang="it">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11053599486"></script>
+    <!-- ================================================ -->
+    <!-- 1) Google Consent Mode v2 - DEFAULT (PRIMA di tutto) -->
+    <!-- ================================================ -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag(){ dataLayer.push(arguments); }
 
+      // Stato di consenso predefinito: NEGATO finché l'utente non sceglie nel banner
+      gtag('consent', 'default', {
+        'ad_storage':            'denied',
+        'ad_user_data':          'denied',
+        'ad_personalization':    'denied',
+        'analytics_storage':     'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage':'denied',
+        'security_storage':      'granted',
+        'wait_for_update': 500
+      });
+
+      // Comportamenti di privacy avanzata per Google Ads
+      gtag('set', 'url_passthrough', true);
+      gtag('set', 'ads_data_redaction', true);
+
+      gtag('js', new Date());
       gtag('config', 'AW-11053599486');
     </script>
+
+    <!-- 2) Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11053599486"></script>
+
+    <!-- ================================================ -->
+    <!-- 3) Iubenda Cookie Solution con Google Consent Mode v2 -->
+    <!-- ================================================ -->
+    <script>
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        "siteId": 1216377,
+        "cookiePolicyId": 45580282,
+        "lang": "it",
+        "perPurposeConsent": true,
+        "googleConsentMode": "template",
+        "banner": {
+          "acceptButtonDisplay": true,
+          "customizeButtonDisplay": true,
+          "rejectButtonDisplay": true,
+          "closeButtonRejects": true,
+          "explicitWithdrawal": true,
+          "listPurposes": true,
+          "position": "float-bottom-center"
+        }
+      };
+    </script>
+    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/1216377.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sun-Energy SRLS | Fotovoltaico e Illuminazione Professionale</title>
@@ -21,7 +68,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#0f172a">
-    
+
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://www.sunenergysrls.com" />
@@ -49,22 +96,14 @@
       "knowsLanguage": "it"
     }
     </script>
-    
-  
-  
-  
+
   <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/4Qr24NUUzKg3cswkHZr4PjTVSi33/social-images/social-1772132732848-ac638e03-2c6d-40bb-8f26-d34554c73654.webp">
   <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/4Qr24NUUzKg3cswkHZr4PjTVSi33/social-images/social-1772132732848-ac638e03-2c6d-40bb-8f26-d34554c73654.webp">
-  
-  
-  
-  
+
   <meta property="og:title" content="Sun-Energy SRLS | Fotovoltaico e Illuminazione Professionale">
   <meta name="twitter:title" content="Sun-Energy SRLS | Fotovoltaico e Illuminazione Professionale">
   <meta property="og:description" content="Fornitura fotovoltaico utility scale 4MW+, importazione diretta e consegna DDP in cantiere. Illuminazione professionale per GDO, retail e grandi gruppi.">
   <meta name="twitter:description" content="Fornitura fotovoltaico utility scale 4MW+, importazione diretta e consegna DDP in cantiere. Illuminazione professionale per GDO, retail e grandi gruppi.">
-  <!-- Iubenda Privacy & Cookie Banner – NON RIMUOVERE -->
-  <script type="text/javascript" src="https://embeds.iubenda.com/widgets/abcd3a80-6db6-11ee-8bfc-5ad8d8c564c0.js"></script>
 </head>
 
   <body>
