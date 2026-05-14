@@ -159,8 +159,8 @@ const Materiale = () => {
                 <img
                   src={brand.logo}
                   alt={brand.name}
-                  className="w-auto object-contain max-w-[70%]"
-                  style={{ height: "80px" }}
+                  className="w-auto object-contain max-w-[80%]"
+                  style={{ height: "90px" }}
                 />
               </div>
             ))}

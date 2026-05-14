@@ -59,13 +59,13 @@ const FvModuliSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               className="bg-card border border-border shadow-md flex items-center justify-center transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-xl"
-              style={{ borderRadius: "20px", padding: "24px 20px", height: "130px" }}
+              style={{ borderRadius: "20px", padding: "24px 20px", height: "140px" }}
             >
               <img
                 src={brand.logo}
                 alt={brand.name}
                 className="w-auto object-contain max-w-[80%]"
-                style={{ height: "60px" }}
+                style={{ height: "80px" }}
               />
             </motion.div>
           ))}
