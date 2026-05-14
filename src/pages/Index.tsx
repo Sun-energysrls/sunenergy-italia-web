@@ -9,6 +9,7 @@ import HomeImportatore from "@/components/HomeImportatore";
 import HomeTransizione from "@/components/HomeTransizione";
 import HomeCTA from "@/components/HomeCTA";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 
 const Index = () => {
   return (
@@ -30,18 +31,20 @@ const Index = () => {
         <meta name="twitter:description" content="Importatore ufficiale di pannelli fotovoltaici dalla Cina. Conformi alla normativa europea." />
         <meta name="twitter:image" content="https://sunenergysrls.com/og-image.jpg" />
       </Helmet>
-      <div className="min-h-screen bg-background">
-        <Navbar />
-        <HeroSection />
-        <HomeChiSiamo />
-        <HomeImportazione />
-        <HomeForniture />
-        <HomeBrands />
-        <HomeImportatore />
-        <HomeTransizione />
-        <HomeCTA />
-        <Footer />
-      </div>
+      <PageTransition>
+        <div className="min-h-screen bg-background">
+          <Navbar />
+          <HeroSection />
+          <HomeChiSiamo />
+          <HomeImportazione />
+          <HomeForniture />
+          <HomeBrands />
+          <HomeImportatore />
+          <HomeTransizione />
+          <HomeCTA />
+          <Footer />
+        </div>
+      </PageTransition>
     </>
   );
 };

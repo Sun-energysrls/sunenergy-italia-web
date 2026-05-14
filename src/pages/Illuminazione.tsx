@@ -8,6 +8,7 @@ import IlCategorieSection from "@/components/illuminazione/IlCategorieSection";
 import IlCatalogoSection from "@/components/illuminazione/IlCatalogoSection";
 import IlCollaborazioniSection from "@/components/illuminazione/IlCollaborazioniSection";
 import IlCtaSection from "@/components/illuminazione/IlCtaSection";
+import PageTransition from "@/components/PageTransition";
 
 const Illuminazione = () => {
   return (
@@ -24,17 +25,19 @@ const Illuminazione = () => {
         <meta property="og:image" content="https://sunenergysrls.com/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <div className="min-h-screen bg-background">
-        <Navbar />
-        <IlHeroSection />
-        <IlPianteLedSection />
-        <IlBrandSection />
-        <IlCategorieSection />
-        <IlCatalogoSection />
-        <IlCollaborazioniSection />
-        <IlCtaSection />
-        <Footer />
-      </div>
+      <PageTransition>
+        <div className="min-h-screen bg-background">
+          <Navbar />
+          <IlHeroSection />
+          <IlPianteLedSection />
+          <IlBrandSection />
+          <IlCategorieSection />
+          <IlCatalogoSection />
+          <IlCollaborazioniSection />
+          <IlCtaSection />
+          <Footer />
+        </div>
+      </PageTransition>
     </>
   );
 };

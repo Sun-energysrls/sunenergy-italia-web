@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import PrivacyCheckbox from "@/components/PrivacyCheckbox";
@@ -105,6 +106,7 @@ const Materiale = () => {
   const inputCls = "w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-colors";
 
   return (
+    <PageTransition>
     <div className="min-h-screen bg-background">
       <Navbar />
 
@@ -305,6 +307,7 @@ const Materiale = () => {
 
       <Footer />
     </div>
+    </PageTransition>
   );
 };
 

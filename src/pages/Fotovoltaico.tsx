@@ -8,6 +8,7 @@ import FvImportazioneSection from "@/components/fotovoltaico/FvImportazioneSecti
 import FvTransizione5Section from "@/components/fotovoltaico/FvTransizione5Section";
 import FvCtaSection from "@/components/fotovoltaico/FvCtaSection";
 import HomeImportatore from "@/components/HomeImportatore";
+import PageTransition from "@/components/PageTransition";
 
 const Fotovoltaico = () => {
   return (
@@ -24,17 +25,19 @@ const Fotovoltaico = () => {
         <meta property="og:image" content="https://sunenergysrls.com/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <div className="min-h-screen bg-background">
-        <Navbar />
-        <FvHeroSection />
-        <FvModuliSection />
-        <FvInverterSection />
-        <FvImportazioneSection />
-        <HomeImportatore />
-        <FvTransizione5Section />
-        <FvCtaSection />
-        <Footer />
-      </div>
+      <PageTransition>
+        <div className="min-h-screen bg-background">
+          <Navbar />
+          <FvHeroSection />
+          <FvModuliSection />
+          <FvInverterSection />
+          <FvImportazioneSection />
+          <HomeImportatore />
+          <FvTransizione5Section />
+          <FvCtaSection />
+          <Footer />
+        </div>
+      </PageTransition>
     </>
   );
 };

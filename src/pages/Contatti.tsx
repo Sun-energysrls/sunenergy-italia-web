@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 
 const Contatti = () => {
   return (
@@ -18,13 +19,15 @@ const Contatti = () => {
         <meta property="og:image" content="https://sunenergysrls.com/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <div className="min-h-screen bg-background">
-        <Navbar />
-        <div className="pt-24">
-          <ContactSection />
+      <PageTransition>
+        <div className="min-h-screen bg-background">
+          <Navbar />
+          <div className="pt-24">
+            <ContactSection />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </PageTransition>
     </>
   );
 };

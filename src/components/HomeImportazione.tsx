@@ -43,10 +43,10 @@ const HomeImportazione = () => {
           {features.map((f, i) => (
             <motion.div
               key={f.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
               className="group bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-orange/30"
             >
               <div className="w-12 h-12 bg-orange/10 rounded-lg flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110">

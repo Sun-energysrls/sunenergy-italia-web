@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/sunenergy-logo.png";
@@ -9,15 +10,26 @@ const Footer = () => {
       <div className="container mx-auto py-12 px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
-          <div className="md:col-span-1">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="md:col-span-1"
+          >
             <img src={logo} alt="SunEnergy SRLS" className="h-10 mb-4" />
             <p className="text-primary-foreground/60 text-sm leading-relaxed">
               SunEnergy SRLS — Soluzioni fotovoltaiche utility-scale per un futuro energetico sostenibile.
             </p>
-          </div>
+          </motion.div>
 
           {/* Quick links */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             <h4 className="font-display font-semibold mb-4 text-sm">Link Rapidi</h4>
             <div className="flex flex-col gap-2">
               {[
@@ -35,10 +47,15 @@ const Footer = () => {
                 </Link>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Services */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <h4 className="font-display font-semibold mb-4 text-sm">Servizi</h4>
             <div className="flex flex-col gap-2 text-primary-foreground/60 text-sm">
               <span>Impianti Utility-Scale</span>
@@ -46,10 +63,15 @@ const Footer = () => {
               <span>Illuminazione LED</span>
               <span>Consulenza Tecnica</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact & Social */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
             <h4 className="font-display font-semibold mb-4 text-sm">Seguici</h4>
             <div className="flex gap-3 mb-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-navy-light rounded-lg flex items-center justify-center hover:bg-orange transition-colors">
@@ -69,11 +91,17 @@ const Footer = () => {
             <a href="tel:+393338590639" onClick={(e) => reportConversion(e, 'AW-11053599486/YyHGCJ7DhqkcEP6V4pYp', 'tel:+393338590639')} className="text-primary-foreground/60 text-sm hover:text-orange transition-colors">
               +39 333 859 0639
             </a>
-          </div>
+          </motion.div>
         </div>
 
         {/* Legal Block */}
-        <div className="border-t border-navy-light/30 pt-6 mb-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="border-t border-navy-light/30 pt-6 mb-6"
+        >
           <div className="text-primary-foreground/40 text-xs leading-relaxed space-y-1 text-center">
             <p className="font-medium text-primary-foreground/50">SUN-ENERGY SOCIETÀ A RESPONSABILITÀ LIMITATA SEMPLIFICATA</p>
             <p>Sede Legale: Via Cecconi 71 – 67051 Avezzano (AQ)</p>
@@ -88,15 +116,21 @@ const Footer = () => {
               Tel: <a href="tel:+393338590639" onClick={(e) => reportConversion(e, 'AW-11053599486/YyHGCJ7DhqkcEP6V4pYp', 'tel:+393338590639')} className="hover:text-primary-foreground/70 transition-colors">+39 333 859 0639</a>
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="border-t border-navy-light/30 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-primary-foreground/40">
-          <p>© {new Date().getFullYear()} SunEnergy SRLS. Tutti i diritti riservati.</p>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="border-t border-navy-light/30 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-primary-foreground/40"
+        >
+          <p>&copy; {new Date().getFullYear()} SunEnergy SRLS. Tutti i diritti riservati.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-primary-foreground/70 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary-foreground/70 transition-colors">Cookie Policy</a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

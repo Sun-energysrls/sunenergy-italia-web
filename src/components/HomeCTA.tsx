@@ -11,17 +11,35 @@ const HomeCTA = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           className="max-w-3xl mx-auto text-center"
         >
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6"
+          >
             Parla con il nostro Ufficio Commerciale
-          </h2>
-          <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-10">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-muted-foreground text-base md:text-lg leading-relaxed mb-10"
+          >
             Richiedi una consulenza tecnica o un preventivo personalizzato per forniture
             fotovoltaiche e illuminotecniche.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-wrap justify-center gap-4"
+          >
             <Link
               to="/contatti"
               className="flex items-center gap-2 bg-orange text-orange-foreground px-8 py-4 rounded-lg font-semibold hover:brightness-110 transition-all text-sm md:text-base shadow-lg shadow-orange/25"
@@ -37,7 +55,7 @@ const HomeCTA = () => {
               <Phone className="w-4 h-4" />
               Contatta il Team
             </a>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

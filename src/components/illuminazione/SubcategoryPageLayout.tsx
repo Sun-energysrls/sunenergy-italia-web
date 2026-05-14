@@ -4,6 +4,7 @@ import { ArrowRight, Phone, Send, ImageOff } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import PrivacyCheckbox from "@/components/PrivacyCheckbox";
@@ -91,6 +92,7 @@ const SubcategoryPageLayout = ({
       setForm((f) => ({ ...f, [field]: e.target.value }));
 
   return (
+    <PageTransition>
     <div className="min-h-screen bg-background">
       <Navbar />
 
@@ -308,6 +310,7 @@ const SubcategoryPageLayout = ({
 
       <Footer />
     </div>
+    </PageTransition>
   );
 };
 

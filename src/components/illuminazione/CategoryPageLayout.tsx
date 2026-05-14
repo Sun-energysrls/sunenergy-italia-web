@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { reportConversion } from "@/utils/analytics";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 
 interface SubcategoryItem {
   name: string;
@@ -36,6 +37,7 @@ const CategoryPageLayout = ({
   subcategoryGroups,
 }: CategoryPageLayoutProps) => {
   return (
+    <PageTransition>
     <div className="min-h-screen bg-background">
       <Navbar />
 
@@ -216,6 +218,7 @@ const CategoryPageLayout = ({
 
       <Footer />
     </div>
+    </PageTransition>
   );
 };
 
