@@ -20,12 +20,20 @@ import maxgeLogo from "@/assets/brands/maxge.png";
 import siemensLogo from "@/assets/brands/siemens.png";
 import threemLogo from "@/assets/brands/3m.png";
 import bticinoLogo from "@/assets/brands/bticino.png";
+import schneiderLogo from "@/assets/brands/schneider.png";
+import zamberlanLogo from "@/assets/brands/zamberlan.png";
+import abbLogo from "@/assets/brands/abb.png";
+import secsunLogo from "@/assets/brands/secsun.png";
 
 const meBrands = [
   { name: "Maxge", logo: maxgeLogo },
   { name: "Siemens", logo: siemensLogo },
   { name: "3M", logo: threemLogo },
   { name: "BTicino", logo: bticinoLogo },
+  { name: "Schneider Electric", logo: schneiderLogo },
+  { name: "Zamberlan", logo: zamberlanLogo },
+  { name: "ABB", logo: abbLogo },
+  { name: "Secsun", logo: secsunLogo },
 ];
 
 const slides = [slide1, slide2, slide3, slide4, slide5];
@@ -141,12 +149,12 @@ const Materiale = () => {
               I Nostri Brand
             </h2>
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center max-w-5xl mx-auto">
             {meBrands.map((brand) => (
               <div
                 key={brand.name}
-                className="w-[280px] md:w-[240px] lg:w-[260px] bg-card border border-border shadow-md flex items-center justify-center transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-xl"
-                style={{ borderRadius: "20px", padding: "32px 36px", height: "160px" }}
+                className="w-full bg-card border border-border shadow-md flex items-center justify-center transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-xl"
+                style={{ borderRadius: "20px", padding: "24px 20px", height: "140px" }}
               >
                 <img
                   src={brand.logo}

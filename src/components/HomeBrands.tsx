@@ -7,6 +7,11 @@ import trinaSolarLogo from "@/assets/brands/trina-solar.png";
 import sunevoLogo from "@/assets/brands/sunevo.png";
 import sunpowerLogo from "@/assets/brands/sunpower.png";
 import jingsunLogo from "@/assets/brands/jingsun.png";
+import longiSolarLogo from "@/assets/brands/longi-solar.png";
+import astronergyLogo from "@/assets/brands/astronergy.png";
+import aikoLogo from "@/assets/brands/aiko.png";
+import risenLogo from "@/assets/brands/risen.png";
+import peimarLogo from "@/assets/brands/peimar.png";
 import philipsLogo from "@/assets/brands/philips.png";
 import samsungLogo from "@/assets/brands/samsung.png";
 import osramLogo from "@/assets/brands/osram.png";
@@ -19,6 +24,11 @@ const pvBrands = [
   { name: "Sunevo", logo: sunevoLogo },
   { name: "SunPower", logo: sunpowerLogo },
   { name: "Jingsun", logo: jingsunLogo },
+  { name: "LONGi Solar", logo: longiSolarLogo },
+  { name: "Astronergy", logo: astronergyLogo },
+  { name: "Aiko", logo: aikoLogo },
+  { name: "Risen", logo: risenLogo },
+  { name: "Peimar", logo: peimarLogo },
 ];
 
 const ledBrands = [

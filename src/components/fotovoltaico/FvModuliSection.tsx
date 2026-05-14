@@ -7,6 +7,11 @@ import trinaSolarLogo from "@/assets/brands/trina-solar.png";
 import sunevoLogo from "@/assets/brands/sunevo.png";
 import sunpowerLogo from "@/assets/brands/sunpower.png";
 import jingsunLogo from "@/assets/brands/jingsun.png";
+import longiSolarLogo from "@/assets/brands/longi-solar.png";
+import astronergyLogo from "@/assets/brands/astronergy.png";
+import aikoLogo from "@/assets/brands/aiko.png";
+import risenLogo from "@/assets/brands/risen.png";
+import peimarLogo from "@/assets/brands/peimar.png";
 
 const brands = [
   { name: "JA Solar", logo: jaSolarLogo },
@@ -16,11 +21,14 @@ const brands = [
   { name: "Sunevo", logo: sunevoLogo },
   { name: "SunPower", logo: sunpowerLogo },
   { name: "Jingsun", logo: jingsunLogo },
+  { name: "LONGi Solar", logo: longiSolarLogo },
+  { name: "Astronergy", logo: astronergyLogo },
+  { name: "Aiko", logo: aikoLogo },
+  { name: "Risen", logo: risenLogo },
+  { name: "Peimar", logo: peimarLogo },
 ];
 
 const FvModuliSection = () => {
-  const doubled = [...brands, ...brands];
-
   return (
     <section className="section-padding bg-background">
       <div className="container mx-auto">
@@ -42,26 +50,25 @@ const FvModuliSection = () => {
           </p>
         </motion.div>
 
-        <div className="overflow-hidden group py-2">
-          <div
-            className="flex gap-8 animate-scroll-left group-hover:[animation-play-state:paused]"
-            style={{ width: "max-content" }}
-          >
-            {doubled.map((brand, i) => (
-              <div
-                key={`${brand.name}-${i}`}
-                className="flex-shrink-0 w-[280px] md:w-[300px] bg-card border border-border shadow-md flex items-center justify-center transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-xl"
-                style={{ borderRadius: "20px", padding: "32px 36px" }}
-              >
-                <img
-                  src={brand.logo}
-                  alt={brand.name}
-                  className="w-auto object-contain max-w-[70%]"
-                  style={{ height: "clamp(70px, 8vw, 90px)" }}
-                />
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 max-w-5xl mx-auto">
+          {brands.map((brand, i) => (
+            <motion.div
+              key={brand.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className="bg-card border border-border shadow-md flex items-center justify-center transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-xl"
+              style={{ borderRadius: "20px", padding: "24px 20px", height: "130px" }}
+            >
+              <img
+                src={brand.logo}
+                alt={brand.name}
+                className="w-auto object-contain max-w-[80%]"
+                style={{ height: "60px" }}
+              />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

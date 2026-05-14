@@ -2,11 +2,19 @@ import { motion } from "framer-motion";
 import philipsLogo from "@/assets/brands/philips.png";
 import samsungLogo from "@/assets/brands/samsung.png";
 import osramLogo from "@/assets/brands/osram.png";
+import schneiderLogo from "@/assets/brands/schneider.png";
+import zamberlanLogo from "@/assets/brands/zamberlan.png";
+import abbLogo from "@/assets/brands/abb.png";
+import secsunLogo from "@/assets/brands/secsun.png";
 
 const brands = [
   { name: "Philips", logo: philipsLogo },
   { name: "Samsung", logo: samsungLogo },
   { name: "Osram", logo: osramLogo },
+  { name: "Schneider Electric", logo: schneiderLogo },
+  { name: "Zamberlan", logo: zamberlanLogo },
+  { name: "ABB", logo: abbLogo },
+  { name: "Secsun", logo: secsunLogo },
 ];
 
 const IlBrandSection = () => {
@@ -31,7 +39,7 @@ const IlBrandSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center max-w-5xl mx-auto">
           {brands.map((brand, i) => (
             <motion.div
               key={brand.name}
@@ -39,8 +47,8 @@ const IlBrandSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="w-[280px] md:w-[300px] bg-card border border-border shadow-md flex items-center justify-center transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-xl"
-              style={{ borderRadius: "20px", padding: "32px 36px", height: "160px" }}
+              className="w-full bg-card border border-border shadow-md flex items-center justify-center transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-xl"
+              style={{ borderRadius: "20px", padding: "24px 20px", height: "140px" }}
             >
               <img
                 src={brand.logo}
